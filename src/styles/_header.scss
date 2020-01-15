@@ -1,0 +1,18 @@
+$header-color: #1795d4;
+
+.header{
+  background: $header-color;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &__logo{
+    margin-left: 1.5em;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: 1.5em;
+  }
+  &__navigation{
+
+  }
+}
