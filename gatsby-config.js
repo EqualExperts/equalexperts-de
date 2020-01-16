@@ -28,5 +28,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `2mx9j3gfirje`,
+        // for now, write a .env file with the key in. Later this will be
+        // added to github in encrypted format using git-crypt.
+        accessToken: process.env.REACT_APP_CONTENTFUL_API_KEY
+      },
+    },
   ],
 }
