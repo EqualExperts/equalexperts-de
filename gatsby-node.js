@@ -26,7 +26,6 @@ exports.createPages =({graphql, boundActionCreators}) =>{
                 if(result.errors){
                     reject(result.errors)
                 }
-                debugger;
                 result.data.allContentfulBlogPost.edges.forEach((edge)=>{
                     createPage({
                         path:edge.node.slug,
