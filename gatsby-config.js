@@ -1,3 +1,7 @@
+const dotenv= require('dotenv')
+if(process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+}
 module.exports = {
   siteMetadata: {
     title: `Equal Experts`,
@@ -6,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

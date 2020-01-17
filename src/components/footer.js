@@ -1,11 +1,10 @@
 import React from "react"
-import '../styles/_footer.scss'
 
 const Footer = () => (
   <footer className={`footer`}>
       <div className={`footer__content-wrapper`}>
           <div className={`footer__copyright`}>
-          © {new Date().getFullYear()}, {` `}
+          © {`2020`}, {` `}
           <a href="https://www.equalexperts.com">Equal Experts</a></div>
           <div className={`footer__social-media`}>
               <a className={`linkedin`} href={`https://www.linkedin.com/company/equal-experts`}>Linkedin</a>
