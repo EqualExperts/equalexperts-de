@@ -24,17 +24,14 @@ a{
   text-decoration: none;
   border-bottom: 1px solid $header-color;
 }
-body{
-  padding-bottom: 5em;
-}
 .header{
   background: $header-color;
+  max-width: 1280px;
+  margin: 0 auto;
   &__content-wrapper{
     height: 80px;
     display: flex;
     align-items: center;
-    max-width: 1240px;
-    margin: 0 auto;
     position: relative;
   }
   &__logo{
@@ -64,7 +61,7 @@ body{
   }
 }
 .content{
-  max-width: 1240px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .module{
@@ -106,12 +103,13 @@ body{
   }
 }
 .footer{
-  position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
   background: $footer-background;
   &__content-wrapper{
-    max-width: 1240px;
+
     padding: 1rem 0 1rem;
     margin: 0 auto;
     display: flex;
@@ -160,6 +158,50 @@ body{
 .github{
   background: url('../images/social-media/ic_github.svg') no-repeat scroll 100%;
 }
+.blog{
+  &__container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2em 1em;
+    box-sizing: border-box;
+  }
+  &__title{
+    text-align: center;
+    font-size: 2.5em;
+  }
+  &__author-date-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top:2em;
+    p{
+      padding: 0 1em;
+      font-size: 1.2em;
+    }
+  }
+  &__author{
+    font-style: italic;
+  }
+  &__date{
+
+  }
+  &__content{
+    padding-top:2em;
+    p{
+      line-height: 1.5;
+      text-align: justify;
+      padding: 0.5em 0;
+    }
+    h3{
+      padding:1em 0 0.5em 0;
+      font-size: 1.5em;
+    }
+  }
+  &__slug{
+
+  }
+
+}
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
@@ -178,6 +220,47 @@ body{
     &__copyright{
       order:1;
       width: auto;
+    }
+  }
+  .blog{
+    &__container{
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 4em 8em;
+      box-sizing: border-box;
+      font-size: 1.2em;
+    }
+    &__title{
+      text-align: center;
+      font-size: 2.5em;
+      padding: 0 1em;
+    }
+    &__author-date-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top:2em;
+      p{
+        padding: 0 1em;
+      }
+    }
+    &__author{
+      font-style: italic;
+    }
+    &__date{
+
+    }
+    &__content{
+      padding-top:2em;
+      p{
+        line-height: 1.5;
+        text-align: justify;
+        padding: 0.5em 0;
+      }
+      h3{
+        padding:1em 0 0.5em 0;
+        font-size: 1.5em;
+      }
     }
   }
 }

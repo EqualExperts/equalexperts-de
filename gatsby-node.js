@@ -11,14 +11,7 @@ exports.createPages =({graphql, boundActionCreators}) =>{
                   node {
                     blogTitle
                     blogDate
-                    blogAuthor
                     slug
-                    node_locale
-                    blogContent {
-                      childContentfulRichText {
-                        html
-                      }
-                    }
                   }
                 }
               }}

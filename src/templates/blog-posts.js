@@ -1,18 +1,25 @@
 import React from "react"
 import {graphql} from "gatsby"
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 class BlogPost extends React.Component{
 render(){
     const {data} = this.props;
     const blogPost = data.contentfulBlogPost;
-    debugger;
+    const date =new Date(Date.parse(blogPost.blogDate));
     return (
         <div>
-            <h1>{blogPost.blogTitle}</h1>
-            <p>{blogPost.slug}</p>
-            <p>{blogPost.blogAuthor}</p>
-            <p>{blogPost.blogDate}</p>
-            <p dangerouslySetInnerHTML={{__html:blogPost.blogContent.childContentfulRichText.html}}></p>
+            <Header/>
+            <div className={`blog__container`}>
+                <h1 className={`blog__title`}>{blogPost.blogTitle}</h1>
+                <div className={`blog__author-date-wrapper`}>
+                    <p className={`blog__author`}>{blogPost.blogAuthor}</p> | <p className={`blog__date`}>{date.toDateString()}</p>
+                </div>
+                <p className={`blog__content`} dangerouslySetInnerHTML={{__html:blogPost.blogContent.childContentfulRichText.html}}></p>
+                <p className={`blog__slug`}>{blogPost.slug}</p>
+            </div>
+            <Footer/>
         </div>
     )
 }
