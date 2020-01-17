@@ -4,7 +4,6 @@ import SEO from "../components/seo"
 import "../styles/index.scss"
 import {graphql} from "gatsby"
 
-
 class IndexPage extends React.Component{
     render(){
         const {data} = this.props;

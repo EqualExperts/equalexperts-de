@@ -758,6 +758,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.2.0":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.3.tgz#0811944f73a6c926bb2ad35e918dcc1bfab279f1"
+  integrity sha512-fVHx1rzEmwB130VTkLnxR+HmxcTjGzH12LYQcFFoBwakMd3aOMD4OsRN7tGG/UOYE2ektgFrS8uACAoRk1CY0w==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/runtime@^7.7.6":
   version "7.7.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.6.tgz#d18c511121aff1b4f2cd1d452f1bac9601dd830f"
@@ -805,6 +812,36 @@
   dependencies:
     follow-redirects "^1.2.5"
     is-buffer "^1.1.5"
+
+"@contentful/gatsby-transformer-contentful-richtext@^13.1.0":
+  version "13.1.0"
+  resolved "https://registry.yarnpkg.com/@contentful/gatsby-transformer-contentful-richtext/-/gatsby-transformer-contentful-richtext-13.1.0.tgz#fd0e106e9cf17da1db6202b656d27ebfb6bfd756"
+  integrity sha512-rH79hgQf17o+TrV7SNtcg+XNlmacxdDbND0ZhmHRkwL2F8YAjFBJdgyc6aBavrHQhs+MzUewJlqLqQW+HhEjNQ==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    "@contentful/rich-text-html-renderer" "^13.1.0"
+    "@contentful/rich-text-plain-text-renderer" "^13.1.0"
+    lodash.words "^4.2.0"
+
+"@contentful/rich-text-html-renderer@^13.1.0":
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-13.4.0.tgz#03c08f4196a9eb9bae9af993b5644624fe256fa9"
+  integrity sha512-g5maEnoGlhMOA/FcF8UTE6V3BHDx8ygfjF5AZKEFcpi+cDL5SfCKvV9FkaasNashrttECy9ncjRsIHPlAmKONg==
+  dependencies:
+    "@contentful/rich-text-types" "^13.4.0"
+    escape-html "^1.0.3"
+
+"@contentful/rich-text-plain-text-renderer@^13.1.0":
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-plain-text-renderer/-/rich-text-plain-text-renderer-13.4.0.tgz#3da5f84d5b5d4f02f30849c0c5f9b9dd55eaaebd"
+  integrity sha512-kUs0oYLupHB3y3/a4iTd3WR+u7iGmkeoHU2nr5tSsqX9WMzM9FHp2v9PI6EN6FsfITWbnYgMW19vJ1bBv0T6BQ==
+  dependencies:
+    "@contentful/rich-text-types" "^13.4.0"
+
+"@contentful/rich-text-types@^13.4.0":
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-13.4.0.tgz#a59c311ebd1b801ee00edbc08663c8d78da26171"
+  integrity sha512-YPdYqGmWiGAood7ri2BUXfPQKNthkQYV1rmQdaq4UAxWK5NLB5NXckaUYLbohqhHKtrq4tnfzVn+ePWID7Dzbg==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -4382,7 +4419,7 @@ es6-weak-map@^2.0.2:
     es6-iterator "^2.0.3"
     es6-symbol "^3.1.1"
 
-escape-html@~1.0.3:
+escape-html@^1.0.3, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
@@ -7758,6 +7795,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash.words@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.words/-/lodash.words-4.2.0.tgz#5ecfeaf8ecf8acaa8e0c8386295f1993c9cf4036"
+  integrity sha1-Xs/q+Oz4rKqODIOGKV8Zk8nPQDY=
 
 lodash@^4.0.0, lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@~4.17.10:
   version "4.17.15"
