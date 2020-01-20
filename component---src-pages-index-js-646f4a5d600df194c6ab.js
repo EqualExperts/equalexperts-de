@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{RXBc:function(e,t,n){"use strict";n.r(t);var l=n("q1tI"),a=n.n(l),r=n("Bl7J"),c=n("vrFN");n("sg+I");t.default=function(){return a.a.createElement(r.a,null,a.a.createElement(c.a,{title:"Home"}),a.a.createElement("h2",null,"Hi people"),a.a.createElement("p",null,"Welcome to Equal Experts Germany"),a.a.createElement("p",null,"Let's build something great."))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-646f4a5d600df194c6ab.js.map
