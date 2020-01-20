@@ -28,7 +28,10 @@ class IndexPage extends React.Component{
                         <div className={`module`}>
                             <div className={`module__title`}>{module.node.moduleTitle}</div>
                             <div className={`module__content`} dangerouslySetInnerHTML={{__html: module.node.moduleContent.childContentfulRichText.html}} />
-                            <div className={`module__link`} dangerouslySetInnerHTML={{__html: module.node.moduleCtAlink.childContentfulRichText.html}} />
+                            {module.node.moduleCtAlink.childContentfulRichText.html?
+                                <div className={`module__link`}
+                                     dangerouslySetInnerHTML={{__html: module.node.moduleCtAlink.childContentfulRichText.html}}/>:''
+                            }
                         </div>
 
                     )
