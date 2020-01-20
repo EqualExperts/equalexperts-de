@@ -1,3 +1,5 @@
+const languages = require('./languages');
+
 const dotenv= require('dotenv')
 if(process.env.NODE_ENV !== 'production') {
   dotenv.config()
@@ -7,9 +9,18 @@ module.exports = {
     title: `Equal Experts`,
     description: `Making software better`,
     author: `devs@equalexperts`,
+    languages,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: false
+      }
+    },
     `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-source-filesystem`,
