@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "../components/layout"
+import LayoutDe from "../components/layout.de"
 import SEO from "../components/seo"
 import "../styles/index.scss"
-import { graphql } from "gatsby"
+import {graphql, Link} from "gatsby"
 
 
 class IndexPage extends React.Component {
@@ -11,12 +11,12 @@ class IndexPage extends React.Component {
     const modules = data.allContentfulModuleTextandCta.edges;
     const heroModule = data.allContentfulHeroModule.edges;
     return (
-      <Layout location={this.props.location}>
+      <LayoutDe location={this.props.location}>
         <SEO title="Home" />
         {heroModule.map((module) => {
           return (
             <div className={`hero__container`} key={module}>
-              <img className={`hero__image`} src={`${module.node.heroImage.file.url}`} alt={``} />
+               <img className={`hero__image`} src={`${module.node.heroImage.file.url}`} alt={``} />
               <h1 className={`hero__title`}>{module.node.heroHeading}</h1>
             </div>
           )
@@ -37,7 +37,7 @@ class IndexPage extends React.Component {
             )
           })
         }
-      </Layout>
+      </LayoutDe>
     )
   }
 }

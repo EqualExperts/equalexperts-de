@@ -2,12 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-import HeaderDe from "./header.de"
+import HeaderEn from "./header.en-US";
 import Footer from "./footer";
 
-const Layout = ({ children, location }) => {
+const LayoutDe = ({ children, location }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteTitleQuery2 {
       site {
         siteMetadata {
           title,
@@ -28,7 +28,7 @@ const Layout = ({ children, location }) => {
 
   return (
     <div className={`main-container`}>
-      <HeaderDe siteTitle={data.site.siteMetadata.title} langs={langsMenu} />
+      <HeaderEn siteTitle={data.site.siteMetadata.title} langs={langsMenu} />
       <article className={`content`}>
         <main>{children}</main>
       </article>
@@ -37,9 +37,9 @@ const Layout = ({ children, location }) => {
   )
 }
 
-Layout.propTypes = {
+LayoutDe.propTypes = {
   children: PropTypes.node.isRequired,
   location: PropTypes.object,
 }
 
-export default Layout
+export default LayoutDe
