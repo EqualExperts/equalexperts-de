@@ -4,7 +4,7 @@ import image from '../images/logo.svg'
 
 const HeaderEn = (props) => {
   const dataQuery = useStaticQuery(graphql`
-        query MyQuery3 {
+        query headerEn {
           allContentfulHeaderMenu(filter: {node_locale: {eq: "en-US"}}){
             edges {
               node {

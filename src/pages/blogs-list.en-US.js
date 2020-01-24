@@ -7,7 +7,7 @@ import Footer from "../components/footer";
 
 const BlogListEn = ({ children, location }) => {
     const data = useStaticQuery(graphql`
-    query MyQuery5 {
+    query BlogListEn {
           allContentfulBlogPost(filter: {node_locale: {eq: "en-US"}}) {
             edges {
               node {

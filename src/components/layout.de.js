@@ -7,7 +7,7 @@ import Footer from "./footer";
 
 const LayoutDe = ({ children, location }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery1 {
+    query layoutDe {
       site {
         siteMetadata {
           title,

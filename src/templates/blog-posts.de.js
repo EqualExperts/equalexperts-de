@@ -32,7 +32,7 @@ render(){
 export default BlogPost
 
 export const pageQuery = graphql`
-    query BlogPostByQuery1($slug: String!){
+    query BlogPostDe($slug: String!){
         contentfulBlogPost(slug:{eq: $slug}){
             blogTitle
             blogDate
