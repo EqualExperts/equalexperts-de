@@ -8,12 +8,10 @@ class BlogPost extends React.Component{
 render(){
     const {data} = this.props;
     const url = window.location.pathname;
-    debugger;
     const { langs, defaultLangKey } = data.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    debugger;
     const blogPost = data.contentfulBlogPost;
     const date =new Date(Date.parse(blogPost.blogDate));
     return (

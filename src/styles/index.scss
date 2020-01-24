@@ -268,6 +268,21 @@ a{
     }
   }
 }
+.blog-list{
+  &__heading{
+    font-size: 3.5em;
+    padding: 30px;
+  }
+  &__content{
+    padding: 10px 30px;
+    h3{
+      font-size: 1.2em;
+    }
+    p{
+      line-height: 1.5;
+    }
+  }
+}
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
