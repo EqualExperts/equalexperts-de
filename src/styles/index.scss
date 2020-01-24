@@ -236,6 +236,38 @@ a{
     }
   }
 }
+.contact{
+  &__heading {
+    font-size: 3.5em;
+    padding: 30px;
+  }
+  &__content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px 30px 30px;
+  }
+  &__content{
+    flex:1 1 60%;
+    p{
+      padding-bottom: 15px;
+      line-height: 1.5;
+    }
+  }
+  &__address{
+    flex: 1 1 35%;
+    a{
+      font-size: 1.2em;
+      word-break: keep-all;
+      margin-bottom: 15px;
+      display: inline-block;
+      line-height: 1;
+    }
+    p{
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+  }
+}
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
@@ -304,6 +336,14 @@ a{
       h3{
         padding:1em 0 0.5em 0;
         font-size: 1.5em;
+      }
+    }
+  }
+  .contact{
+    &__address{
+      margin-left: 5%;
+      a{
+        font-size: 1.4em;
       }
     }
   }

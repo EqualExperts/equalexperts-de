@@ -9,8 +9,6 @@ exports.createPages =({graphql, boundActionCreators}) =>{
             allContentfulBlogPost {
                 edges {
                   node {
-                    blogTitle
-                    blogDate
                     slug
                     node_locale
                   }

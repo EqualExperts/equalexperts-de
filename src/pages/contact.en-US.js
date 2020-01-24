@@ -7,8 +7,8 @@ import Footer from "../components/footer";
 
 const Contact = ({ children, location }) => {
     const data =useStaticQuery(graphql`
-        query ContactUsQueryDe {
-            allContentfulContact(filter: {node_locale: {eq: "de"}}) {
+        query ContactUsQueryEn {
+            allContentfulContact(filter: {node_locale: {eq: "en-US"}}) {
             edges {
               node {
                 contactHeading
@@ -37,11 +37,13 @@ const Contact = ({ children, location }) => {
           }
         }
       `);
+
     const url = location.pathname;
     const { langs, defaultLangKey } = data.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+
     return (
         <div className={`main-container`}>
             <HeaderDe siteTitle={data.site.siteMetadata.title} langs={langsMenu} />
@@ -49,8 +51,8 @@ const Contact = ({ children, location }) => {
                 <main>{children}</main>
                 <h1 className={`contact__heading`}>{data.allContentfulContact.edges[0].node.contactHeading}</h1>
                 <div className={`contact__content-wrapper`}>
-                <div className={`contact__content`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactBodyContentRichTextNode.childContentfulRichText.html}}/>
-                <div className={`contact__address`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactAddressRichTextNode.childContentfulRichText.html}}/>
+                    <div className={`contact__content`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactBodyContentRichTextNode.childContentfulRichText.html}}/>
+                    <div className={`contact__address`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactAddressRichTextNode.childContentfulRichText.html}}/>
                 </div>
             </article>
             <Footer />
@@ -59,7 +61,7 @@ const Contact = ({ children, location }) => {
 }
 
 Contact.propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.node.isRequired,
     location: PropTypes.object,
 }
 

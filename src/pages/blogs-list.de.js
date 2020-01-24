@@ -6,6 +6,7 @@ import HeaderDe from "../components/header.de";
 import Footer from "../components/footer";
 
 const BlogListDe = ({ children, location }) => {
+    debugger;
     const data = useStaticQuery(graphql`
     query MyQuery4 {
           allContentfulBlogPost(filter: {node_locale: {eq: "de"}}) {
