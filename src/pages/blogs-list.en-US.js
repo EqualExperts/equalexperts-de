@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {useStaticQuery, graphql, Link} from "gatsby"
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-import HeaderDe from "../components/header.de";
+import HeaderDe from "../components/header.en-US";
 import Footer from "../components/footer";
 
 const BlogListDe = ({ children, location }) => {
@@ -60,7 +60,7 @@ const BlogListDe = ({ children, location }) => {
                     {blogPosts.map((blog)=> {
                         const date = new Date(Date.parse(blog.node.blogDate));
                         return <li><span>{date.getMonth() + 1}/{date.getFullYear()}</span><Link
-                            to={`de/${blog.node.slug}`}>{blog.node.slug}</Link><span> - {blog.node.blogAuthor}</span></li>
+                            to={`en-US/${blog.node.slug}`}>{blog.node.slug}</Link><span> - {blog.node.blogAuthor}</span></li>
                     })}
                 </ul>
             </article>
