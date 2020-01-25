@@ -43,8 +43,9 @@ a{
   }
   &__navigation {
     position: absolute;
-    right: 2em;
     text-align: right;
+    right:0;
+    top:2.5em;
 
     &-link {
       margin: 0 20px;
@@ -58,11 +59,23 @@ a{
     right:0;
     top:0;
     padding:5px;
+    ul{
+      list-style-type: none;
+      li{
+        display: inline-block;
+        padding-right: 10px;
+        a{
+          color:#fff;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
   }
 }
 .content{
   max-width: 1280px;
   margin: 0 auto;
+  min-height: calc(100vh - 160px);
 }
 .module{
   text-align: center;
@@ -86,6 +99,7 @@ a{
 .hero{
   &__container{
     position: relative;
+    overflow: hidden;
   }
   &__title{
     position: absolute;
@@ -93,13 +107,14 @@ a{
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    font-size: 6em;
+    font-size: 3em;
     color: #fff;
     line-height: 1;
     left: calc(50% - 40%);
   }
   &__image{
-
+    width:auto;
+    height:390px;
   }
 }
 .footer{
@@ -200,12 +215,88 @@ a{
   &__slug{
 
   }
-
+}
+.blogs{
+  &__list {
+    list-style-type: none;
+    padding:20px;
+    li{
+      padding-bottom: 10px;
+      span{
+        min-width: 80px;
+        display: inline-block;
+        font-style: italic;
+      }
+      a{
+        text-transform: capitalize;
+        font-size: 1.1em;
+        display: inline-block;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+.contact{
+  &__heading {
+    font-size: 3.5em;
+    padding: 30px;
+  }
+  &__content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px 30px 30px;
+  }
+  &__content{
+    flex:1 1 60%;
+    p{
+      padding-bottom: 15px;
+      line-height: 1.5;
+    }
+  }
+  &__address{
+    flex: 1 1 35%;
+    a{
+      font-size: 1.2em;
+      word-break: keep-all;
+      margin-bottom: 15px;
+      display: inline-block;
+      line-height: 1;
+    }
+    p{
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+  }
+}
+.blog-list{
+  &__heading{
+    font-size: 3.5em;
+    padding: 30px;
+  }
+  &__content{
+    padding: 10px 30px;
+    h3{
+      font-size: 1.2em;
+    }
+    p{
+      line-height: 1.5;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
-      right: 6em;
+      right: 10em;
+      top:auto;
+    }
+  }
+  .hero{
+    &__title{
+      font-size: 6em;
+    }
+    &__image{
+      width:100%;
+      height:auto;
     }
   }
   .footer{
@@ -260,6 +351,14 @@ a{
       h3{
         padding:1em 0 0.5em 0;
         font-size: 1.5em;
+      }
+    }
+  }
+  .contact{
+    &__address{
+      margin-left: 5%;
+      a{
+        font-size: 1.4em;
       }
     }
   }

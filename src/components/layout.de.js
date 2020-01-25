@@ -5,9 +5,9 @@ import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import HeaderDe from "./header.de"
 import Footer from "./footer";
 
-const Layout = ({ children, location }) => {
+const LayoutDe = ({ children, location }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query layoutDe {
       site {
         siteMetadata {
           title,
@@ -37,9 +37,9 @@ const Layout = ({ children, location }) => {
   )
 }
 
-Layout.propTypes = {
+LayoutDe.propTypes = {
   children: PropTypes.node.isRequired,
   location: PropTypes.object,
 }
 
-export default Layout
+export default LayoutDe
