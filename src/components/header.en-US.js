@@ -26,7 +26,7 @@ const HeaderDe = () => {
           }
         }
       `);
-    const url = window?'': window.location.pathname
+    const url = window? window.location.pathname:'';
     const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
