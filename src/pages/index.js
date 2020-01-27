@@ -8,11 +8,9 @@ class IndexPage extends React.Component {
 
   constructor(props) {
     super(props);
-
     if (typeof window !== 'undefined') {
       const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
       const langKey = getUserLangKey(langs, defaultLangKey);
-      console.log(langKey);
       const homeUrl = withPrefix(`/${langKey}/`);
 
       navigate(homeUrl);

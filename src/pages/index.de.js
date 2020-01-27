@@ -2,7 +2,7 @@ import React from "react"
 import LayoutDe from "../components/layout.de"
 import SEO from "../components/seo"
 import "../styles/index.scss"
-import {graphql, Link} from "gatsby"
+import {graphql} from "gatsby"
 
 
 class IndexPage extends React.Component {

@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import HeaderDe from "../components/header.de";
 import Footer from "../components/footer";
 
@@ -25,26 +24,11 @@ const Contact = ({ children, location }) => {
               }
             }
           }
-          site {
-            siteMetadata {
-              title,
-              description,
-              languages {
-                defaultLangKey
-                langs
-              }
-            }
-          }
         }
       `);
-    const url = location.pathname;
-    const { langs, defaultLangKey } = data.site.siteMetadata.languages;
-    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    const homeLink = `/${langKey}/`;
-    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
     return (
         <div className={`main-container`}>
-            <HeaderDe siteTitle={data.site.siteMetadata.title} langs={langsMenu} />
+            <HeaderDe/>
             <article className={`content`}>
                 <main>{children}</main>
                 <h1 className={`contact__heading`}>{data.allContentfulContact.edges[0].node.contactHeading}</h1>

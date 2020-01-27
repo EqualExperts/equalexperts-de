@@ -10,7 +10,7 @@ class BlogPost extends React.Component{
         const date =new Date(Date.parse(blogPost.blogDate));
         return (
             <div>
-                {/*<HeaderDe/>*/}
+                <HeaderDe/>
                 <div className={`blog__container`}>
                     <h1 className={`blog__title`}>{blogPost.blogTitle}</h1>
                     <div className={`blog__author-date-wrapper`}>

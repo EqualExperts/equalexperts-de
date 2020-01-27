@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {useStaticQuery, graphql, Link} from "gatsby"
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-import HeaderDe from "../components/header.en-US";
+import HeaderEn from "../components/header.en-US";
 import Footer from "../components/footer";
 
 const BlogListDe = ({ children, location }) => {
@@ -14,16 +13,6 @@ const BlogListDe = ({ children, location }) => {
                 slug,
                 blogAuthor,
                 blogDate
-              }
-            }
-          }
-          site {
-            siteMetadata {
-              title,
-              description,
-              languages {
-                defaultLangKey
-                langs
               }
             }
           }
@@ -41,17 +30,12 @@ const BlogListDe = ({ children, location }) => {
           }
         }
   `)
-    const url = location.pathname;
-    const { langs, defaultLangKey } = data.site.siteMetadata.languages;
-    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    const homeLink = `/${langKey}/`;
-    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
     const blogPosts =data.allContentfulBlogPost.edges;
     const blogList = data.allContentfulBlogList.edges[0].node;
 
     return (
         <div className={`main-container`}>
-            <HeaderDe siteTitle={data.site.siteMetadata.title} langs={langsMenu} />
+            <HeaderEn/>
             <article className={`content`}>
                 <main>{children}</main>
                 <h1 className={`blog-list__heading`}>{blogList.blogListTitle}</h1>

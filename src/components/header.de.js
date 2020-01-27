@@ -1,10 +1,11 @@
 import {graphql, Link, useStaticQuery} from "gatsby"
 import React from "react"
 import image from '../images/logo.svg'
+import {getCurrentLangKey, getLangs, getUrlForLang} from "ptz-i18n";
 
-const HeaderDe = (props) => {
-  const dataQuery = useStaticQuery(graphql`
-        query header {
+const HeaderDe = () => {
+    const dataQuery = useStaticQuery(graphql`
+        query headerDe {
           allContentfulHeaderMenu(filter: {node_locale: {eq: "de"}}){
             edges {
               node {
@@ -13,19 +14,35 @@ const HeaderDe = (props) => {
               }
             }
           }
+          site {
+                siteMetadata {
+                  title,
+                  description,
+                  languages {
+                    defaultLangKey
+                    langs
+                  }
+                }
+          }
         }
       `);
-  const links = props.langs.map(lang => {
-    return (
-        <li>
-            <Link to={lang.link} key={lang.langKey}>
-              <span selected={lang.selected}>
-                {lang.langKey}
-              </span>
-            </Link>
-        </li>
-          )
-      }
+
+    const url = window.location.pathname? '':window.location.pathname;
+    const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
+    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+    const homeLink = `/${langKey}/`;
+    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+    const links = langsMenu.map(lang => {
+        return (
+            <li>
+                <Link to={lang.link} key={lang.langKey}>
+                  <span selected={lang.selected}>
+                    {lang.langKey}
+                  </span>
+                </Link>
+            </li>
+              )
+          }
   );
 
   return (
