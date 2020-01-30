@@ -12,12 +12,11 @@ class IndexPage extends React.Component {
       const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
       const langKey = getUserLangKey(langs, defaultLangKey);
       const homeUrl = withPrefix(`/${langKey}/`);
-
       navigate(homeUrl);
     }
   }
   render() {
-    return (<div />);
+    return (<div  className={`language-container`}/>);
   }
 }
 

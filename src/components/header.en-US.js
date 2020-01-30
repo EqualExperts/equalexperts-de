@@ -51,8 +51,8 @@ const HeaderDe = () => {
                     <img className={`header__logo`} src={image} alt={`Equal Experts logo`} />
                 </Link>
                 <nav className={`header__navigation`}>
-                    <Link to="/de/blogs-list/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>
-                    <Link to="/de/contact/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
+                    <Link to="/en-US/blogs-list/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>
+                    <Link to="/en-US/contact/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
                 </nav>
                 <div className={`header__lang-switcher`}>
                     <ul>

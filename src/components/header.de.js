@@ -27,7 +27,6 @@ const HeaderDe = () => {
         }
       `);
 
-
     const url = typeof window !== 'undefined' ? window.location.pathname : '';
 
     const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
