@@ -3,7 +3,7 @@ exports.createPages =({graphql, boundActionCreators}) =>{
     const {createPage} = boundActionCreators
     return new Promise((resolve,reject)=>{
         const BlogPostTemplateDe =path.resolve('src/templates/blog-posts.de.js')
-        const BlogPostTemplateEn =path.resolve('./src/templates/blog-posts.en-US.js')
+        const BlogPostTemplateEn =path.resolve('src/templates/blog-posts.en-US.js')
         resolve(
             graphql(`{
             allContentfulBlogPost {
