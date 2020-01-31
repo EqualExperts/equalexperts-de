@@ -28,7 +28,6 @@ const HeaderDe = () => {
       `);
 
     const url = typeof window !== 'undefined' ? window.location.pathname : '';
-
     const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
@@ -38,7 +37,7 @@ const HeaderDe = () => {
             <li>
                 <Link to={lang.link} key={lang.langKey}>
                   <span selected={lang.selected}>
-                    {lang.langKey}
+                      {lang.langKey === 'de'?'German':'English'}
                   </span>
                 </Link>
             </li>

@@ -36,7 +36,7 @@ const HeaderDe = () => {
                 <li>
                     <Link to={lang.link} key={lang.langKey}>
                       <span selected={lang.selected}>
-                        {lang.langKey}
+                         {lang.langKey === 'de'?'German':'English'}
                       </span>
                     </Link>
                 </li>

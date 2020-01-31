@@ -12,7 +12,12 @@ const BlogListDe = ({ children, location }) => {
               node {
                 slug,
                 blogAuthor,
-                blogDate
+                blogDate,
+                blogContent {
+                  childContentfulRichText {
+                    html
+                  }
+                }
               }
             }
           }
@@ -39,12 +44,14 @@ const BlogListDe = ({ children, location }) => {
             <article className={`content`}>
                 <main>{children}</main>
                 <h1 className={`blog-list__heading`}>{blogList.blogListTitle}</h1>
-                <div className={`blog-list__content`} dangerouslySetInnerHTML={{__html: blogList.childContentfulBlogListBlogListContentRichTextNode.childContentfulRichText.html}}/>
+                <div className={`blog-list__title`} dangerouslySetInnerHTML={{__html: blogList.childContentfulBlogListBlogListContentRichTextNode.childContentfulRichText.html}}/>
                 <ul className={`blogs__list`}>
                     {blogPosts.map((blog)=> {
                         const date = new Date(Date.parse(blog.node.blogDate));
                         return <li><span>{date.getMonth() + 1}/{date.getFullYear()}</span><Link
-                            to={`en-US/${blog.node.slug}`}>{blog.node.slug}</Link><span> - {blog.node.blogAuthor}</span></li>
+                            to={`en-US/${blog.node.slug}`}>{blog.node.slug}</Link><span> Author - {blog.node.blogAuthor}</span>
+                            <p className={`blog-list__content`} dangerouslySetInnerHTML={{__html:blog.node.blogContent.childContentfulRichText.html}} />
+                        </li>
                     })}
                 </ul>
             </article>

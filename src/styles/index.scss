@@ -23,6 +23,13 @@ a{
   color:$header-color;
   text-decoration: none;
   border-bottom: 1px solid $header-color;
+  display: inline-block;
+  &:hover{
+    transform: scale(1.03);
+  }
+}
+p{
+  line-height: 1.5;
 }
 .header{
   background: $header-color;
@@ -48,7 +55,7 @@ a{
     top:2.5em;
 
     &-link {
-      margin: 0 20px;
+      margin: 0 2em;
       color: $navigation-link-color;
       text-decoration: none;
       border-bottom: 1px solid $navigation-link-color;
@@ -66,7 +73,9 @@ a{
         padding-right: 10px;
         a{
           color:#fff;
-          border-bottom: 1px solid #fff;
+          &[aria-current="page"]{
+            color:#ddd;
+          }
         }
       }
     }
@@ -227,9 +236,9 @@ a{
         display: inline-block;
         font-style: italic;
       }
-      a{
+      >a{
         text-transform: capitalize;
-        font-size: 1.1em;
+        font-size: 1.2em;
         display: inline-block;
         margin: 0 10px;
       }
@@ -273,7 +282,8 @@ a{
     font-size: 3.5em;
     padding: 30px;
   }
-  &__content{
+
+  &__title{
     padding: 10px 30px;
     h3{
       font-size: 1.2em;
@@ -282,11 +292,23 @@ a{
       line-height: 1.5;
     }
   }
+  &__content{
+    padding: 1em 90px 2em 90px;
+    &> p:first-child{
+      display: block;
+      b{
+        font-weight: normal;
+      }
+    }
+    &>*{
+      display: none;
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
-      right: 10em;
+      right: 20em;
       top:auto;
     }
   }
