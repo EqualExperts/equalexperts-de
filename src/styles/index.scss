@@ -55,7 +55,7 @@ p{
     top:2.5em;
 
     &-link {
-      margin: 0 2em;
+      margin: 0 1.5em;
       color: $navigation-link-color;
       text-decoration: none;
       border-bottom: 1px solid $navigation-link-color;
@@ -88,7 +88,7 @@ p{
 }
 .module{
   text-align: center;
-  padding:5em 0;
+  padding:4em 0;
   &__title{
     font-size: 2em;
   }
@@ -97,11 +97,10 @@ p{
     line-height: 1.5;
     font-size: 1.2em;
     max-width: 800px;
-    padding-top: 2em;
+    padding: 2em 1.5em;
   }
   &__link{
     font-size: 1.2em;
-    padding: 20px;
     display: inline-block;
   }
 }
@@ -240,7 +239,12 @@ p{
         text-transform: capitalize;
         font-size: 1.2em;
         display: inline-block;
-        margin: 0 10px;
+        border-bottom: 0 none;
+        margin: 0.5em 0;
+        padding-right: 1em;
+        &:hover{
+          transform: scale(1);
+        }
       }
     }
   }
@@ -293,7 +297,7 @@ p{
     }
   }
   &__content{
-    padding: 1em 90px 2em 90px;
+    padding: 1em 0 2em 0;
     &> p:first-child{
       display: block;
       b{
@@ -306,15 +310,19 @@ p{
   }
 }
 .simple-text-module{
-  padding:2em 4em 1em 4em;
+  padding: 2em 1.5em 1em 1.5em;
   text-align: center;
   font-size: 1.2em;
 }
+
 @media screen and (min-width: 768px) {
   .header{
     &__navigation {
       right: 20em;
       top:auto;
+      &-link{
+        margin: 0 2em;
+      }
     }
   }
   .hero{
@@ -380,6 +388,9 @@ p{
         font-size: 1.5em;
       }
     }
+    &-list__content{
+      padding: 1em 5em 2em 5em;
+    }
   }
   .contact{
     &__address{
@@ -388,5 +399,8 @@ p{
         font-size: 1.4em;
       }
     }
+  }
+  .simple-text-module{
+    padding:2em 4em 1em 4em;
   }
 }

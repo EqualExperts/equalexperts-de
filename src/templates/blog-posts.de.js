@@ -4,7 +4,6 @@ import HeaderDe from "../components/header.de";
 import Footer from "../components/footer";
 
 const BlogPost = (props) => {
-    debugger;
         const {data} = props;
         const blogPost = data.contentfulBlogPost;
         const date =new Date(Date.parse(blogPost.blogDate));
