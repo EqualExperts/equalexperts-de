@@ -4,6 +4,7 @@ import HeaderDe from "../components/header.de";
 import Footer from "../components/footer";
 
 const BlogPost = (props) => {
+    debugger;
         const {data} = props;
         const blogPost = data.contentfulBlogPost;
         const date =new Date(Date.parse(blogPost.blogDate));
@@ -25,7 +26,7 @@ export default BlogPost
 
 export const pageQuery = graphql`
     query BlogPostDe($slug: String!){
-        contentfulBlogPost(slug:{eq: $slug}){
+         contentfulBlogPost(slug: {eq: $slug}, node_locale: {eq: "de"}) {
             blogTitle
             blogDate
             blogAuthor
@@ -36,6 +37,6 @@ export const pageQuery = graphql`
                 html
               }
             }
-            }
+          }
     }
 `

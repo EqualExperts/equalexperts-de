@@ -10,6 +10,7 @@ class IndexPage extends React.Component {
     const { data } = this.props;
     const modules = data.allContentfulModuleTextandCta.edges;
     const heroModule = data.allContentfulHeroModule.edges;
+    const textModule= data.allContentfulModuleTextOnly.edges[0];
     return (
       <LayoutDe location={this.props.location}>
         <SEO title="Home" />
@@ -21,7 +22,9 @@ class IndexPage extends React.Component {
             </div>
           )
         })}
-
+        {
+          <div className={`simple-text-module`} dangerouslySetInnerHTML={{__html:textModule.node.childContentfulModuleTextOnlyContentRichTextNode.childContentfulRichText.html}}></div>
+        }
         {
           modules.map((module) => {
             return (
@@ -70,6 +73,17 @@ query {
         heroImage {
           file {
             url
+          }
+        }
+      }
+    }
+  }
+  allContentfulModuleTextOnly(filter: {node_locale: {eq: "de"}}) {
+    edges {
+      node {
+        childContentfulModuleTextOnlyContentRichTextNode {
+          childContentfulRichText {
+            html
           }
         }
       }

@@ -25,6 +25,7 @@ exports.createPages =({graphql, boundActionCreators}) =>{
                             component: BlogPostTemplateDe,
                             context: {
                                 slug: edge.node.slug,
+                                node_locale:edge.node.node_locale
                             }
                         }):
                         createPage({
@@ -32,6 +33,7 @@ exports.createPages =({graphql, boundActionCreators}) =>{
                             component: BlogPostTemplateEn,
                             context: {
                                 slug: edge.node.slug,
+                                node_locale:edge.node.node_locale
                             }
                         })
                     }

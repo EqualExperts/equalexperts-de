@@ -11,6 +11,7 @@ const BlogListDe = ({ children, location }) => {
             edges {
               node {
                 slug,
+                blogTitle,
                 blogAuthor,
                 blogDate,
                 blogContent {
@@ -49,7 +50,7 @@ const BlogListDe = ({ children, location }) => {
                     {blogPosts.map((blog)=> {
                         const date = new Date(Date.parse(blog.node.blogDate));
                         return <li><span>{date.getMonth() + 1}/{date.getFullYear()}</span><Link
-                            to={`en-US/${blog.node.slug}`}>{blog.node.slug}</Link><span> Author - {blog.node.blogAuthor}</span>
+                            to={`en-US/${blog.node.slug}`}>{blog.node.blogTitle}</Link><span> Author - {blog.node.blogAuthor}</span>
                             <p className={`blog-list__content`} dangerouslySetInnerHTML={{__html:blog.node.blogContent.childContentfulRichText.html}} />
                         </li>
                     })}
