@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
-import HeaderDe from "../components/header.de";
-import Footer from "../components/footer";
+import HeaderDe from "../components/header.de-DE";
+import FooterDe from "../components/footer.de-DE";
 
 const Contact = ({ children, location }) => {
     const data =useStaticQuery(graphql`
@@ -37,7 +37,7 @@ const Contact = ({ children, location }) => {
                 <div className={`contact__address`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactAddressRichTextNode.childContentfulRichText.html}}/>
                 </div>
             </article>
-            <Footer />
+            <FooterDe />
         </div>
     )
 }

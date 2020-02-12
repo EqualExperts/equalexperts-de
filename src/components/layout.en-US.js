@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import HeaderEn from "./header.en-US";
-import Footer from "./footer";
+import Footer from "./footer.en-US";
 
 const LayoutDe = ({ children, location }) => {
   return (

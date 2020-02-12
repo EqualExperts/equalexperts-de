@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import HeaderDe from "./header.de"
-import Footer from "./footer";
+import HeaderDe from "./header.de-DE"
+import FooterDe from "./footer.de-DE";
 
 const Layout = ({ children, location }) => {
   return (
@@ -10,7 +10,7 @@ const Layout = ({ children, location }) => {
       <article className={`content`}>
         <main>{children}</main>
       </article>
-      <Footer />
+      <FooterDe />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import {graphql, Link, useStaticQuery} from "gatsby"
 import React from "react"
-import image from '../images/logo.svg'
 import {getCurrentLangKey, getLangs, getUrlForLang} from "ptz-i18n";
+import HeaderLayout from "./header_layout";
 
 const HeaderDe = () => {
     const dataQuery = useStaticQuery(graphql`
@@ -31,36 +31,32 @@ const HeaderDe = () => {
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    const links = langsMenu.map((lang) => {
+    const switcherLinks = langsMenu.map((lang, i) => {
+            let separatorClass = i < langsMenu.length-1 ? "header__lang-switcher__separator" : null;
             return (
-                <li>
+                <li className={separatorClass}>
                     <Link to={lang.link} key={lang.langKey}>
                       <span selected={lang.selected}>
-                         {lang.langKey === 'de'?'German':'English'}
+                         {lang.langKey === 'de'?'DE':'EN'}
                       </span>
+
                     </Link>
                 </li>
             )
         }
     );
 
+    const navLinks = [
+      <Link to="/de/blogs-list/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
+      <Link to="/de/contact/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
+    ];
+
     return (
-        <header className={`header`}>
-            <div className={`header__content-wrapper`}>
-                <Link to={'/'}>
-                    <img className={`header__logo`} src={image} alt={`Equal Experts logo`} />
-                </Link>
-                <nav className={`header__navigation`}>
-                    <Link to="/en-US/blogs-list/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>
-                    <Link to="/en-US/contact/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
-                </nav>
-                <div className={`header__lang-switcher`}>
-                    <ul>
-                        {links}
-                    </ul>
-                </div>
-            </div>
-        </header>
+      <HeaderLayout
+            navLinks={navLinks}
+            switcherLinks={switcherLinks}
+      >
+      </HeaderLayout>
     );
 }
 

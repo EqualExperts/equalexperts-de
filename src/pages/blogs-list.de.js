@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {useStaticQuery, graphql, Link} from "gatsby"
-import HeaderDe from "../components/header.de";
-import Footer from "../components/footer";
+import HeaderDe from "../components/header.de-DE";
+import FooterDe from "../components/footer.de-DE";
 
 const BlogListDe = ({ children, location }) => {
     const data = useStaticQuery(graphql`
@@ -56,7 +56,7 @@ const BlogListDe = ({ children, location }) => {
                 })}
                 </ul>
             </article>
-            <Footer />
+            <FooterDe />
         </div>
     )
 }

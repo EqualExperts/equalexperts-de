@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import {graphql, useStaticQuery} from "gatsby"
 import HeaderEn from "../components/header.en-US";
-import Footer from "../components/footer";
+import FooterEn from "../components/footer.en-US";
 
 const Contact = ({ children, location }) => {
     const data =useStaticQuery(graphql`
@@ -37,7 +37,7 @@ const Contact = ({ children, location }) => {
                     <div className={`contact__address`} dangerouslySetInnerHTML={{__html:data.allContentfulContact.edges[0].node.childContentfulContactContactAddressRichTextNode.childContentfulRichText.html}}/>
                 </div>
             </article>
-            <Footer />
+            <FooterEn />
         </div>
     )
 }

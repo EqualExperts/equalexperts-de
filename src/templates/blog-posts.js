@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
-// import HeaderDe from "../components/header.de";
-import Footer from "../components/footer";
+import HeaderDe from "../components/header.de-DE";
+import FooterDe from "../components/footer.de-DE";
 
 class BlogPost extends React.Component{
     render(){
@@ -19,7 +19,7 @@ class BlogPost extends React.Component{
                     <p className={`blog__content`} dangerouslySetInnerHTML={{__html:blogPost.blogContent.childContentfulRichText.html}}></p>
                     <p className={`blog__slug`}>{blogPost.slug}</p>
                 </div>
-                <Footer/>
+                <FooterDe />
             </div>
         )
     }

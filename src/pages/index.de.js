@@ -1,5 +1,5 @@
 import React from "react"
-import LayoutDe from "../components/layout.de"
+import LayoutDe from "../components/layout.de-DE"
 import SEO from "../components/seo"
 import "../styles/index.scss"
 import {graphql} from "gatsby"

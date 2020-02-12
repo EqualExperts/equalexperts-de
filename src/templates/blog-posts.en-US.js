@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
-import HeaderEn from "../components/header.de";
-import Footer from "../components/footer";
+import HeaderEn from "../components/header.en-US";
+import FooterEn from "../components/footer.en-US";
 
 const BlogPost = (props) => {
         const {data} = props;
@@ -9,7 +9,7 @@ const BlogPost = (props) => {
         const date =new Date(Date.parse(blogPost.blogDate));
     return (
         <div>
-            <HeaderEn/>
+            <HeaderEn />
             <div className={`blog__container`}>
                 <h1 className={`blog__title`}>{blogPost.blogTitle}</h1>
                 <div className={`blog__author-date-wrapper`}>
@@ -17,7 +17,7 @@ const BlogPost = (props) => {
                 </div>
                 <p className={`blog__content`} dangerouslySetInnerHTML={{__html:blogPost.blogContent.childContentfulRichText.html}}></p>
             </div>
-        <Footer/>
+        <FooterEn />
         </div>
     )
 }
