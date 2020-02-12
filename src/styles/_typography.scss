@@ -1,0 +1,207 @@
+/* ==Fonts== */
+$primaryFont: lato, sans-serif;
+$secondaryFont: montserrat, sans-serif;
+
+$primaryFontSize: 20px;
+$secondaryFontSize: 18px;
+$headerTwoFontSize: 34px;
+
+$splashPageFontSize: 30px;
+$splashPageFontSizeSub: 68px;
+
+$primaryReducedFont: $primaryFontSize/1.7;
+$secondaryReducedFont: $secondaryFontSize/1.2;
+
+$headerTwoFontSizeReduced: $headerTwoFontSize/1.1;
+
+$accDivideColor: $midLightGrey;
+$accHeadTitlePadding: 35px;
+
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: $primaryFont;
+  font-weight: $regular;
+  color: $fontGrey;
+  background-color: $bgGrey;
+}
+
+
+//Headers
+
+h1, .xlarge-header {
+  color: $fontDarkGrey;
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  padding: 0;
+  line-height: 1.2;
+
+  font-size: 4rem;
+  margin: 3rem 0 2rem;
+
+}
+
+h2, .large-header {
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  line-height: 1.2;
+  color: $fontDarkGrey;
+  padding: 0;
+
+  font-size: 3rem;
+  margin: 0 0 1rem;
+
+}
+
+h3, .medium-header {
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  line-height: 1.2;
+  color: $fontDarkGrey;
+  padding: 0;
+
+  font-size: 2.6rem;
+  margin: 0 0 1rem;
+
+}
+
+h4, h5, h6,
+.small-header {
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  line-height: 1.2;
+  color: $fontDarkGrey;
+  padding: 0;
+
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+
+}
+
+/* Fix for font size 0 in divs */
+article div {
+  font-size: 2rem;
+  font-weight: $regular;
+  line-height: 1.3;
+  margin: 0 0 3rem;
+  padding: 0;
+  color: $fontGrey;
+}
+/* Intros for content pages and heros */
+
+.introParagraphs {
+  font-family: $primaryFont;
+  font-weight: $bold;
+  color: $fontDarkGrey;
+  line-height: 1.188;
+  font-size: 2.2rem;
+  margin: 0 0 3rem;
+
+
+}
+
+.introParagraphs--small {
+  @extend .introParagraphs;
+
+  font-size: 1.8rem;
+
+}
+
+p, .paragraph, address, .address {
+  font-size: 2rem;
+  font-weight: $regular;
+  line-height: 1.3;
+  margin: 0 0 3rem;
+  padding: 0;
+  color: $fontGrey;
+}
+
+.address p {
+  color: $fontGrey !important;
+}
+
+blockquote {
+  margin: 0 1.5rem 3rem;
+
+  p {
+    font-size: 2.2rem;
+    font-family: $primaryFont;
+    font-style: italic;
+    font-weight: $bold;
+    color: $fontDarkGrey;
+    margin: 0;
+    
+  }
+  
+  em {
+    display: block;
+  }
+}
+
+article, section {
+  ul {
+    font-size: 2rem;
+    padding-left: 2rem;
+    color: $fontDarkGrey;
+    margin-bottom: 3rem;
+    
+    li {
+      margin-bottom: 2.1rem;
+      &:before {
+        content: '\2022';
+        color: $pink;
+        width: 2rem;
+        margin-left: -1em;
+        display: inline-block;
+      }
+    }
+  }
+
+  ol {
+    color: $fontDarkGrey;
+    font-size: 2rem;
+    padding-left: 2rem;
+    counter-reset: item;
+    list-style-type: none;
+    margin-bottom: 3rem;
+    
+    li {
+      margin-bottom: 2.1rem;
+      counter-increment:item;
+      &:before {
+        content:counter(item) ".";
+        width: 2rem;
+        margin-left: -1em;
+        display: inline-block;
+        font-weight: $bold;
+      }
+    }
+  }
+}
+
+/* links */
+
+a {
+  color: $primaryBlue;
+  text-decoration: none;
+  font-weight:$bold;
+  &:hover {
+    color: $pink;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $tertiaryBlue;
+    text-decoration: underline;
+  }
+  &:focus {
+    color: $primaryBlue;
+    outline: 3px solid $primaryBtnOutline;
+  }
+}
