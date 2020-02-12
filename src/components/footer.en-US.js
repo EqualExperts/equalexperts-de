@@ -1,7 +1,7 @@
 import {graphql, Link, useStaticQuery} from "gatsby"
 import React from "react"
 import {getCurrentLangKey, getLangs, getUrlForLang} from "ptz-i18n";
-import HeaderLayout from "./header_layout";
+import FooterLayout from "./footer_layout";
 
 const FooterUS = () => {
     const dataQuery = useStaticQuery(graphql`
@@ -57,12 +57,12 @@ const FooterUS = () => {
     ];
 
     return (
-      <HeaderLayout
+      <FooterLayout
             navLinks={navLinks}
             switcherLinks={switcherLinks}
             legalLinks={legalLinks}
       >
-      </HeaderLayout>
+      </FooterLayout>
     );
 }
 

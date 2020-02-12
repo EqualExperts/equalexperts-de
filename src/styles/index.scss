@@ -137,9 +137,12 @@ p{
     margin: 0 auto;
     text-align: center;
     font-size: 3em;
-    color: #fff;
+    color: $secondaryWhite;
     line-height: 1;
     left: calc(50% - 40%);
+  }
+  &__lastLine {
+    color: $white;
   }
   &__image{
     width:auto;
@@ -373,13 +376,18 @@ p{
       }
     }
   }
-  .hero{
+  .hero {
     
-    &__image{
+    &__image {
       width:100%;
       height:auto;
     }
+
+    &__title {
+      font-size: 9rem;
+    }
   }
+
   .footer{
     .footer-content {
       flex-direction: row;

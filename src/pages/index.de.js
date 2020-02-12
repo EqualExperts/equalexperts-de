@@ -15,10 +15,11 @@ class IndexPage extends React.Component {
       <LayoutDe location={this.props.location}>
         <SEO title="Home" />
         {heroModule.map((module) => {
+          const headingParts = module.node.heroHeading.split(/(?<=\.)/);
           return (
             <div className={`hero__container`} key={module}>
                <img className={`hero__image`} src={`${module.node.heroImage.file.url}`} alt={``} />
-              <h1 className={`hero__title`}>{module.node.heroHeading}</h1>
+              <h1 className={`hero__title`}>{headingParts[0]}<span className="hero__lastLine">{headingParts[1]}</span></h1>
             </div>
           )
         })}
