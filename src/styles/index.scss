@@ -391,22 +391,19 @@ p{
   .footer{
     .footer-content {
       flex-direction: row;
-    }
-    .footer-social-links-menu {
-      justify-content: flex-end;
-    }
-    .footer-strapline {
-      text-align: left;
-    }
-   
-  }
-  .footer{
-    .footer-content {
-      flex-direction: row;
   
       .footer-strapline {
         text-align: left;
       }
+      
+      .footer-strapline {
+        margin-bottom: 0;
+        text-align: left;
+        p {
+          font-size: 4rem;
+        }
+      }
+
       .footer-social-links-menu {
         justify-content: flex-end;
   
