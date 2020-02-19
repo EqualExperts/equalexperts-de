@@ -17,7 +17,7 @@ class IndexPage extends React.Component {
         {heroModule.map((module) => {
           const headingParts = module.node.heroHeading.split(/(?<=\.)/);
           return (
-            <div className={`hero__container`}>
+            <div className={`hero__container`} key={`heading_${headingParts[1]}`}>
               <img className={`hero__image`} src={`${module.node.heroImage.file.url}`} alt={``} />
               <h1 className={`hero__title`}>{headingParts[0]}<span className="hero__lastLine">{headingParts[1]}</span></h1>
             </div>
@@ -29,7 +29,7 @@ class IndexPage extends React.Component {
         {
           modules.map((module) => {
             return (
-              <div className={`module`}>
+              <div className={`module`} key={`module_${module.node.moduleTitle}`}>
                 <div className={`module__title`}>{module.node.moduleTitle}</div>
                 <div className={`module__content`} dangerouslySetInnerHTML={{ __html: module.node.moduleContent.childContentfulRichText.html }} />
                 {module.node.moduleCtAlink.childContentfulRichText.html ?

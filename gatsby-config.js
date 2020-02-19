@@ -5,7 +5,7 @@ if(process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
 module.exports = {
-  pathPrefix: `/equalexperts-de`,
+  pathPrefix: `/`,
 }
 module.exports = {
   siteMetadata: {
@@ -21,7 +21,8 @@ module.exports = {
       options: {
         langKeyForNull: 'any',
         langKeyDefault: languages.defaultLangKey,
-        useLangKeyLayout: false
+        useLangKeyLayout: false,
+        prefixDefault : false,
       }
     },
     `@contentful/gatsby-transformer-contentful-richtext`,

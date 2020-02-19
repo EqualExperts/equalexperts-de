@@ -32,28 +32,17 @@ const HeaderDe = () => {
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    const switcherLinks = langsMenu.map((lang, i) => {
-        let separatorClass = i < langsMenu.length-1 ? "header__lang-switcher__separator" : null;
-        return (
-            <li className={separatorClass}>
-                <Link to={lang.link} key={lang.langKey}>
-                  <span selected={lang.selected}>
-                      {lang.langKey === 'de'?'DE':'EN'}
-                  </span>
-                </Link>
-            </li>
-              )
-          }
-  );
-  const navLinks = [
-    <Link to="/de/blogs-list/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
-    <Link to="/de/contact/" className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
-  ];
+    const navLinks = [
+      <Link to="/kunde/" key={'blogNavItem1'} className={`header__navigation-link`}>Kunde</Link>,
+      <Link to="/karrier/" key={'blogNavItem2'} className={`header__navigation-link`}>Karrier</Link>,
+      <Link to="/blogs-list/" key={'blogNavItem3'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
+      <Link to="/contact/" key={'blogNavItem4'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
+    ];
 
   return (
     <HeaderLayout
       navLinks={navLinks}
-      switcherLinks={switcherLinks}
+      switcherLinks={langsMenu}
     >
     </HeaderLayout>
   );

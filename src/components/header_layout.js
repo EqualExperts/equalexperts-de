@@ -15,7 +15,23 @@ const HeaderLayout = (props) => {
                     {props.navLinks}
                     <div className={`header__lang-switcher`}>
                       <ul>
-                          {props.switcherLinks}
+                      {props.switcherLinks.map((lang, i) => {
+                        let link = lang.link;
+                        if(lang.langKey === "de") {
+                          link = "/";
+                        }
+                        let separatorClass = i < props.switcherLinks.length-1 ? "header__lang-switcher__separator" : null;
+                        return (
+                          <li className={separatorClass} key={`langSelector_${i}`}>
+                              <Link to={link}>
+                                <span selected={lang.selected}>
+                                    {lang.langKey === 'de'?'DE':'EN'}
+                                </span>
+                              </Link>
+                          </li>
+                          );
+                        }
+                      )}
                       </ul>
                     </div>
                 </nav>

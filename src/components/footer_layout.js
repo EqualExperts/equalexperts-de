@@ -21,7 +21,7 @@ const Footer = (props) => (
     </div>
     <div className="footer-content">
         <nav role="navigation">
-            <ul class="legal-navigation">
+            <ul className="legal-navigation">
                 {props.legalLinks}
             </ul>
         </nav>
