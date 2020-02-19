@@ -27,10 +27,10 @@ const FooterDe = () => {
     `);
 
   const navLinks = [
-    <Link to="/kunde/" key={'blogNavItem1'} className={`header__navigation-link`}>Kunde</Link>,
-    <Link to="/karrier/" key={'blogNavItem2'} className={`header__navigation-link`}>Karrier</Link>,
-    <Link to="/blogs-list/" key={'blogNavItem3'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
-    <Link to="/contact/" key={'blogNavItem4'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
+    <Link to="/kunde/" key={'blogNavItem1'} className={`footer__navigation-link`}>Kunde</Link>,
+    <Link to="/karrier/" key={'blogNavItem2'} className={`footer__navigation-link`}>Karrier</Link>,
+    <Link to="/blogs-list/" key={'blogNavItem3'} className={`footer__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
+    <Link to="/contact/" key={'blogNavItem4'} className={`footer__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
   ];
   const legalLinks = [
     <li className="legal-navigation__item" key={'legalNavItem1'}><a href="/privacy-notice">Privacy notice</a></li>,
