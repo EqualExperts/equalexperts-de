@@ -1,7 +1,7 @@
 import React from "react"
 import LayoutDe from "../components/layout.de-DE"
 import SEO from "../components/seo"
-import Clients from "../components/clients"
+import Clients from "../components/clients.de-DE"
 import "../styles/index.scss"
 import {graphql} from "gatsby"
 
