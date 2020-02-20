@@ -148,40 +148,22 @@ blockquote {
 article, section {
   ul {
     font-size: 2rem;
-    padding-left: 2rem;
     color: $fontDarkGrey;
-    margin-bottom: 3rem;
     
     li {
       margin-bottom: 2.1rem;
-      &:before {
-        content: '\2022';
-        color: $pink;
-        width: 2rem;
-        margin-left: -1em;
-        display: inline-block;
-      }
     }
   }
 
   ol {
     color: $fontDarkGrey;
     font-size: 2rem;
-    padding-left: 2rem;
     counter-reset: item;
     list-style-type: none;
-    margin-bottom: 3rem;
     
     li {
       margin-bottom: 2.1rem;
       counter-increment:item;
-      &:before {
-        content:counter(item) ".";
-        width: 2rem;
-        margin-left: -1em;
-        display: inline-block;
-        font-weight: $bold;
-      }
     }
   }
 }

@@ -5,7 +5,7 @@ if(process.env.NODE_ENV !== 'production') {
   dotenv.config()
 }
 module.exports = {
-  pathPrefix: `/`,
+  pathPrefix: `/equalexperts-de`,
 }
 module.exports = {
   siteMetadata: {

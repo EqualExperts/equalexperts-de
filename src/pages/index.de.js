@@ -1,6 +1,7 @@
 import React from "react"
 import LayoutDe from "../components/layout.de-DE"
 import SEO from "../components/seo"
+import Clients from "../components/clients"
 import "../styles/index.scss"
 import {graphql} from "gatsby"
 
@@ -26,6 +27,7 @@ class IndexPage extends React.Component {
         {
           <div className={`simple-text-module`} dangerouslySetInnerHTML={{__html:textModule.node.childContentfulModuleTextOnlyContentRichTextNode.childContentfulRichText.html}}></div>
         }
+        <Clients></Clients>
         {
           modules.map((module) => {
             return (

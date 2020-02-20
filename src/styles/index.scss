@@ -111,7 +111,7 @@ p{
 }
 .module{
   text-align: center;
-  padding:4em 0;
+  padding:4em 25px;
   &__title{
     font-size: 2em;
   }
@@ -151,6 +151,36 @@ p{
     height:390px;
   }
 }
+
+.client_container {
+  background-color: $lightestGrey;
+
+  .client_title  {
+    font-size: 3rem;
+  }
+
+  .client_list{
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: "row";
+    flex-wrap: wrap;
+    list-style: none;
+  
+    .client_item {
+      text-align: center;
+      padding: 1em;
+      width: 50%;
+  
+      img {
+        max-width: 100%;
+      }
+    }
+  
+  }
+
+}
+
 .footer{
   bottom: 0;
   background: $footer-background;
@@ -388,6 +418,21 @@ p{
     &__title {
       font-size: 9rem;
     }
+  }
+
+  .client_container {
+  
+    .client_list{
+    
+      .client_item {
+        
+        padding: 2em;
+        width: 25%;
+    
+      }
+    
+    }
+  
   }
 
   .footer{
