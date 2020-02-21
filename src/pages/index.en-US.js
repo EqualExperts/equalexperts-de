@@ -83,7 +83,7 @@ query {
       }
     }
   }
-  allContentfulModuleTextOnly(filter: {node_locale: {eq: "de"}}) {
+  allContentfulModuleTextOnly(filter: {node_locale: {eq: "en-US"}}) {
     edges {
       node {
         childContentfulModuleTextOnlyContentRichTextNode {
