@@ -42,6 +42,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "test": "echo 'run tests here'",
     "UItest" : "backstop test --config=tests/visualRegression/backstopTests.js",
     "UItestGenerateReference" : "backstop reference --config=tests/visualRegression/backstopTests.js"
   },
