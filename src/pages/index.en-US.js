@@ -2,6 +2,7 @@ import React from "react"
 import LayoutEn from "../components/layout.en-US"
 import SEO from "../components/seo"
 import Clients from "../components/clients.en-US"
+import Contacts from "../components/contacts.en-US"
 import "../styles/index.scss"
 import {graphql} from "gatsby"
 
@@ -28,6 +29,7 @@ class IndexPage extends React.Component {
           <div className={`simple-text-module`} dangerouslySetInnerHTML={{__html:textModule.node.childContentfulModuleTextOnlyContentRichTextNode.childContentfulRichText.html}}></div>
         }
         <Clients></Clients>
+        <Contacts></Contacts>
         {
           modules.map((module) => {
             return (

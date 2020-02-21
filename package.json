@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
+    "backstopjs": "^4.4.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
@@ -20,10 +21,10 @@
     "gatsby-transformer-sharp": "^2.3.7",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
+    "ptz-i18n": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "ptz-i18n": "latest"
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
@@ -35,14 +36,14 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "contentful" : "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "develop": "gatsby develop",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/EqualExperts/equalexperts-de.git",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "UItest" : "backstop test --config=tests/visualRegression/backstopTests.js",
+    "UItestGenerateReference" : "backstop reference --config=tests/visualRegression/backstopTests.js"
   },
   "repository": {
     "type": "git",

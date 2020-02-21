@@ -115,6 +115,9 @@ p{
   &__title{
     font-size: 2em;
   }
+  &_heading{
+    font-size: 4rem;
+  }
   &__content{
     margin: 0 auto;
     line-height: 1.5;
@@ -155,10 +158,6 @@ p{
 .client_container {
   background-color: $lightestGrey;
 
-  .client_title  {
-    font-size: 3rem;
-  }
-
   .client_list{
     align-items: center;
     display: flex;
@@ -179,6 +178,82 @@ p{
   
   }
 
+}
+
+.contact {
+
+  &_intro {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &_locations {
+    background : url(https://www.equalexperts.com/wp-content/uploads/2018/07/EE_Germany.jpg) center center no-repeat;
+    background-size: cover;
+    padding: 2.5em 0;
+    text-align: center;
+  }
+
+  &_locationsContainers {
+    display : flex;
+    flex-direction: column;
+  }
+
+  &_location {
+    align-items: center;
+    background-color: $lightestGreyTransparent;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 3em 1em;
+    margin: 25px;
+    width: auto;
+  }
+
+  &__region {
+    color: $fontGrey;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  &__city {
+    font-size: 3rem;
+    margin-bottom: 25px;
+  }
+
+  &__tel {
+    color: $fontGrey;
+    font-family: montserrat,sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  &__email {
+    font-family: montserrat,sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+
+
+}
+
+.btn {
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0);
+  color: #1795d4;
+  -webkit-box-shadow: inset 0 0 0 2px #1795d4;
+  box-shadow: inset 0 0 0 2px #1795d4;
+  min-width: 250px;
+  width: 100%;
+  padding: 13px 30px;
+  max-width: 325px;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  display: inline-block;
+  font-weight: 700;
 }
 
 .footer{
@@ -537,4 +612,21 @@ p{
   .simple-text-module{
     padding:2em 4em 1em 4em;
   }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .contact {
+
+    &_locationsContainers {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &_location {
+      width: 28%;
+    }
+
+  }
+
 }
