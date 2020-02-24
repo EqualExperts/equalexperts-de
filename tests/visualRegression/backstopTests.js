@@ -4,6 +4,7 @@ module.exports = {
     engineOptions : {
         headless: true,
     },
+    "puppeteerOffscreenCaptureFix" : true,
     viewports: [
       {
         name: 'phone',
@@ -35,7 +36,9 @@ module.exports = {
         selectorExpansion: true,
         selectors: [
           '.header',
-          '.footer'
+          '.footer',
+          '.contact',
+          '.contact_locations'
         ],
         readyEvent: null,
         delay: 1000,
