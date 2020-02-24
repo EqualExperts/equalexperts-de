@@ -38,7 +38,9 @@ module.exports = {
           '.header',
           '.footer',
           '.contact',
-          '.contact_locations'
+          '.contact_locations',
+          '.roles',
+          '.roleTypes'
         ],
         readyEvent: null,
         delay: 1000,

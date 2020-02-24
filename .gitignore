@@ -67,3 +67,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# BackstopJS artifacts
+bitmaps_test/
+html_report/

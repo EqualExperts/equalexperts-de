@@ -3,6 +3,7 @@ import LayoutDe from "../components/layout.de-DE"
 import SEO from "../components/seo"
 import Clients from "../components/clients.de-DE"
 import Contacts from "../components/contacts.de-DE"
+import Roles from "../components/roles.de-DE"
 import "../styles/index.scss"
 import {graphql} from "gatsby"
 
@@ -30,6 +31,7 @@ class IndexPage extends React.Component {
         }
         <Clients></Clients>
         <Contacts></Contacts>
+        <Roles></Roles>
         {
           modules.map((module) => {
             return (

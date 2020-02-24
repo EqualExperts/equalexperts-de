@@ -129,6 +129,13 @@ p{
     font-size: 1.2em;
     display: inline-block;
   }
+
+  &_intro {
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+  }
+
 }
 .hero{
   &__container{
@@ -182,11 +189,6 @@ p{
 
 .contact {
 
-  &_intro {
-    font-size: 2rem;
-    text-align: center;
-  }
-
   &_locations {
     background : url(https://www.equalexperts.com/wp-content/uploads/2018/07/EE_Germany.jpg) center center no-repeat;
     background-size: cover;
@@ -235,6 +237,24 @@ p{
     margin-bottom: 25px;
   }
 
+
+}
+
+.roleTypes {
+
+  display : flex;
+  flex-direction: column;
+
+  &_type {
+    align-items: center;
+    background-color: $lightestGreyTransparent;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 1em;
+    margin: 25px;
+    text-align: center;
+    width: auto;
+  }
 
 }
 
@@ -357,9 +377,6 @@ p{
   &__author{
     font-style: italic;
   }
-  &__date{
-
-  }
   &__content{
     padding-top:2em;
     p{
@@ -465,6 +482,7 @@ p{
   padding: 2em 1.5em 1em 1.5em;
   text-align: center;
   font-size: 1.2em;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -627,6 +645,30 @@ p{
       width: 28%;
     }
 
+  }
+
+  .roleTypes {
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    &_type {
+      width: 28%;
+    }
+    
+  }
+
+  .simple-text-module {
+    max-width: 80%;
+  }
+
+  .module{
+  
+    &_intro {
+      max-width: 80%;
+    }
+  
   }
 
 }

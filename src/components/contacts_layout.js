@@ -6,7 +6,7 @@ const Clients = (props) => (
       <h2 className={"module_heading"}>{props.contactCopy.contactIntroductionTitle}</h2>
       {props.contactCopy.contactIntroduction.json.content.map(item => {
           return item.content.map(content => {
-            return (<p className="contact_intro" key={content.value}>{content.value}</p>)
+            return (<p className="module_intro" key={content.value}>{content.value}</p>)
           })
       })}
     </div>
