@@ -34,6 +34,7 @@ const HeaderDe = () => {
 
     const navLinks = [
       <Link to="/en-US/customers/" key={'blogNavItem1'} className={`header__navigation-link`}>Customers</Link>,
+      <Link to="/events/" key={'blogNavItem6'} className={`header__navigation-link`}>Events</Link>,
       <Link to="/en-US/career/" key={'blogNavItem2'} className={`header__navigation-link`}>Career</Link>,
       <Link to="/en-US/blogs-list/" key={'blogNavItem3'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
       <Link to="/en-US/contact/" key={'blogNavItem4'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>

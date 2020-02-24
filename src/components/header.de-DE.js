@@ -34,6 +34,7 @@ const HeaderDe = () => {
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
     const navLinks = [
       <Link to="/kunde/" key={'blogNavItem1'} className={`header__navigation-link`}>Kunde</Link>,
+      <Link to="/events/" key={'blogNavItem5'} className={`header__navigation-link`}>Veranstaltungen</Link>,
       <Link to="/karrier/" key={'blogNavItem2'} className={`header__navigation-link`}>Karrier</Link>,
       <Link to="/blogs-list/" key={'blogNavItem3'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
       <Link to="/contact/" key={'blogNavItem4'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
