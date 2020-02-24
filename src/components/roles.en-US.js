@@ -2,7 +2,7 @@ import {graphql, useStaticQuery} from "gatsby"
 import React from "react";
 import RolesLayout from "./roles_layout";
 
-const Contact = (props) => {
+const RolesUS = (props) => {
     const dataQuery = useStaticQuery(graphql`
     query RolesQueryUS {
         allContentfulRolesIntro(filter: {node_locale: {eq: "en-US"}}) {
@@ -36,4 +36,4 @@ const Contact = (props) => {
 }
 
 
-export default Contact
+export default RolesUS

@@ -2,7 +2,7 @@ import {graphql, useStaticQuery} from "gatsby"
 import React from "react";
 import RolesLayout from "./roles_layout";
 
-const Contact = (props) => {
+const RolesDe = (props) => {
     const dataQuery = useStaticQuery(graphql`
         query RolesQueryDe {
             allContentfulRolesIntro(filter: {node_locale: {eq: "de"}}) {
@@ -27,7 +27,6 @@ const Contact = (props) => {
             }
         }
     `);
-    console.log(dataQuery.allContentfulRole.edges);
     return ( 
         <RolesLayout 
              rolesIntroContent={dataQuery.allContentfulRolesIntro.edges[0].node}
@@ -37,4 +36,4 @@ const Contact = (props) => {
 }
 
 
-export default Contact
+export default RolesDe

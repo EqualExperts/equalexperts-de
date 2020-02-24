@@ -1,6 +1,6 @@
 import React from "react";
 
-const Clients = (props) => (
+const Roles = (props) => (
   <div>
     <div className={"module roles"}>
       <h2 className={"module_heading"}>{props.rolesIntroContent.rolesTitle}</h2>
@@ -13,8 +13,15 @@ const Clients = (props) => (
     <div className="roleTypes">
       {props.roles.map(role => {
         let uri = encodeURI(`/roles/${role.node.roleTitle}`);
+        let key = `roleType_${role.node.roleTitle}`;
         return (
-          <a href={uri} className={"roleTypes_type"} target="_blank" key={role.node.id}>{role.node.roleTitle}</a>
+          <a
+            key={key}
+            href={uri} 
+            className={"roleTypes_type"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            >{role.node.roleTitle}</a>
         )
       })}
   </div>
@@ -22,4 +29,4 @@ const Clients = (props) => (
 )
 
 
-export default Clients
+export default Roles
