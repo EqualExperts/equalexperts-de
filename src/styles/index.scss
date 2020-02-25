@@ -247,11 +247,14 @@ p{
 
   &_type {
     align-items: center;
-    background-color: $lightestGreyTransparent;
+    background-color: $lightGrey;
+    background-position : center 30%;
+    background-repeat : no-repeat;
+    background-size : 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3em 1em;
+    padding: 6em 1em 3em 1em;
     margin: 25px;
     text-align: center;
     width: auto;
