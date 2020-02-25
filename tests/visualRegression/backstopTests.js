@@ -29,24 +29,58 @@ module.exports = {
     ],
     scenarios: [
       {
-        label: 'EE DE homepage',
-        url: 'http://localhost:8000/',
+        label: 'EE DE header',
+        url: 'http://localhost:8000/stubbedComponents/header',
         hideSelectors: [],
         removeSelectors: [],
         selectorExpansion: true,
         selectors: [
-          '.header',
-          '.footer',
-          '.contact',
-          '.contact_locations',
-          '.roles',
-          '.roleTypes'
+          '.header'
+        ],
+        readyEvent: null,
+        delay: 2000,
+        misMatchThreshold: 0.1,
+      },
+      {
+        label: 'EE DE footer',
+        url: 'http://localhost:8000/stubbedComponents/footer',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+          '.footer'
         ],
         readyEvent: null,
         delay: 1000,
         misMatchThreshold: 0.1,
-        // onBeforeScript: 'onBefore.js',
-        // onReadyScript: 'onReady.js'
+      },
+      {
+        label: 'EE DE contact',
+        url: 'http://localhost:8000/stubbedComponents/contact',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+          '.contact',
+          '.contact_locations',
+        ],
+        readyEvent: null,
+        delay: 1000,
+        misMatchThreshold: 0.1,
+      },
+      {
+        label: 'EE DE roles',
+        url: 'http://localhost:8000/stubbedComponents/roles',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+          '.roles',
+          '.roleTypes',
+        ],
+        readyEvent: null,
+        delay: 1000,
+        misMatchThreshold: 0.1,
       }
     ],
     paths: {
