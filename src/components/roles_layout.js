@@ -14,8 +14,15 @@ const Roles = (props) => (
       {props.roles.map(role => {
         let uri = encodeURI(`/roles/${role.node.roleTitle}`);
         let key = `roleType_${role.node.roleTitle}`;
+        let image = "";
+        if(role.node.roleImage) {
+          image = role.node.roleImage.file.url;
+        }
         return (
           <a
+            style={{
+              backgroundImage : `url(${image})`
+            }}
             key={key}
             href={uri} 
             className={"roleTypes_type"} 

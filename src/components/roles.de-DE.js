@@ -22,6 +22,12 @@ const RolesDe = (props) => {
                         roleSummary {
                             json
                         }
+                        roleImage {
+                            file {
+                                fileName
+                                url
+                            }
+                        }
                     }
                 }
             }
