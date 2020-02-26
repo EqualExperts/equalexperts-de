@@ -37,6 +37,11 @@ class IndexPage extends React.Component {
       </div>
     )
   }
+  componentDidMount() {
+    window.requestAnimationFrame(function() {
+      console.log("componentLoaded");
+    });
+  }
 }
 
 export default IndexPage

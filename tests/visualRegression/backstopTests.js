@@ -9,22 +9,22 @@ module.exports = {
       {
         name: 'phone',
         width: 360,
-        height: 640
+        height: 3000
       },
       {
         name: 'tablet_v',
         width: 568,
-        height: 1024
+        height: 3000
       },
       {
         name: 'tablet_h',
         width: 1024,
-        height: 768
+        height: 3000
       },
       {
         name: 'desktop',
         width: 1366,
-        height: 1024
+        height: 3000
       }
     ],
     scenarios: [
@@ -37,8 +37,8 @@ module.exports = {
         selectors: [
           '.header'
         ],
-        readyEvent: null,
-        delay: 2000,
+        readyEvent: "componentLoaded",
+        delay: 1000,
         misMatchThreshold: 0.1,
       },
       {
@@ -50,7 +50,7 @@ module.exports = {
         selectors: [
           '.footer'
         ],
-        readyEvent: null,
+        readyEvent: "componentLoaded",
         delay: 1000,
         misMatchThreshold: 0.1,
       },
@@ -61,10 +61,9 @@ module.exports = {
         removeSelectors: [],
         selectorExpansion: true,
         selectors: [
-          '.contact',
-          '.contact_locations',
+          '.main-container'
         ],
-        readyEvent: null,
+        readyEvent: "componentLoaded",
         delay: 1000,
         misMatchThreshold: 0.1,
       },
@@ -78,7 +77,7 @@ module.exports = {
           '.roles',
           '.roleTypes',
         ],
-        readyEvent: null,
+        readyEvent: "componentLoaded",
         delay: 1000,
         misMatchThreshold: 0.1,
       }
