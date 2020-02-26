@@ -13,7 +13,11 @@ const HeaderLayout = (props) => {
                 </div>
                 <nav className={`header__navigation`}>
                     {props.navLinks.map(item => {
-                      return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`header__navigation-link`}>{item.navItemText}</Link>)
+                      if(item.navItemUrl.indexOf("#") !== -1) {
+                        return (<a href={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`header__navigation-link`}>{item.navItemText}</a>);
+                      } else {
+                        return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`header__navigation-link`}>{item.navItemText}</Link>);
+                      }
                     })}
                     <div className={`header__lang-switcher`}>
                       <ul>

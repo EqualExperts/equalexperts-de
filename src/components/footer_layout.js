@@ -18,14 +18,20 @@ const Footer = (props) => (
     <div className="footer-content">
         <nav role="navigation" className="footer-navigation">
             {props.navLinks.map(item => {
-                return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</Link>)
+                if(item.navItemUrl.indexOf("#") !== -1) {
+                    return (<a href={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</a>);
+                } else {
+                    return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</Link>);
+                }
             })}
         </nav>  
     </div>
     <div className="footer-content">
         <nav role="navigation">
             <ul className="legal-navigation">
-                {props.legalLinks}
+                {props.legalLinks.map(item => {
+                    return(<li className="legal-navigation__item" key={`legalItem_${item.navItemUrl}`}><Link to={item.navItemUrl}>{item.navItemText}</Link></li>);
+                })}
             </ul>
         </nav>
     </div>

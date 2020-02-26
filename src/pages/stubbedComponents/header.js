@@ -1,5 +1,4 @@
 import React from "react"
-import {Link} from "gatsby"
 import HeaderLayout from "../../components/header_layout";
 import "../../styles/index.scss"
 
