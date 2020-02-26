@@ -12,7 +12,9 @@ const HeaderLayout = (props) => {
                   </Link>
                 </div>
                 <nav className={`header__navigation`}>
-                    {props.navLinks}
+                    {props.navLinks.map(item => {
+                      return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`header__navigation-link`}>{item.navItemText}</Link>)
+                    })}
                     <div className={`header__lang-switcher`}>
                       <ul>
                       {props.switcherLinks.map((lang, i) => {

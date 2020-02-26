@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "gatsby"
 
 const Footer = (props) => (
   <footer className={`footer`}>
@@ -16,7 +17,9 @@ const Footer = (props) => (
     </div>
     <div className="footer-content">
         <nav role="navigation" className="footer-navigation">
-            {props.navLinks}
+            {props.navLinks.map(item => {
+                return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</Link>)
+            })}
         </nav>  
     </div>
     <div className="footer-content">

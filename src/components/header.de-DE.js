@@ -1,4 +1,4 @@
-import {graphql, Link, useStaticQuery} from "gatsby"
+import {graphql, useStaticQuery} from "gatsby"
 import React from "react"
 import {getCurrentLangKey, getLangs, getUrlForLang} from "ptz-i18n";
 import HeaderLayout from "./header_layout";
@@ -6,11 +6,13 @@ import HeaderLayout from "./header_layout";
 const HeaderDe = () => {
     const dataQuery = useStaticQuery(graphql`
         query headerDe {
-          allContentfulHeaderMenu(filter: {node_locale: {eq: "de"}}){
+          allContentfulMainNav(filter: {node_locale: {eq: "de"}}){
             edges {
               node {
-                contactLink
-                blogLink
+                navItems {
+                  navItemText
+                  navItemUrl
+                }
               }
             }
           }
@@ -26,23 +28,14 @@ const HeaderDe = () => {
           }
         }
       `);
-
     const url = typeof window !== 'undefined' ? window.location.pathname : '';
     const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     const homeLink = `/${langKey}/`;
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
-    const navLinks = [
-      <Link to="/kunde/" key={'blogNavItem1'} className={`header__navigation-link`}>Kunde</Link>,
-      <Link to="/karrier/" key={'blogNavItem2'} className={`header__navigation-link`}>Karrier</Link>,
-      <Link to="/womanInTech/" key={'blogNavItem6'} className={`header__navigation-link`}>Women in Tech</Link>,
-      <Link to="/blogs-list/" key={'blogNavItem3'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.blogLink}</Link>,
-      <Link to="/contact/" key={'blogNavItem4'} className={`header__navigation-link`}>{dataQuery.allContentfulHeaderMenu.edges[0].node.contactLink}</Link>
-    ];
-    
   return (
     <HeaderLayout
-      navLinks={navLinks}
+      navLinks={dataQuery.allContentfulMainNav.edges[0].node.navItems}
       switcherLinks={langsMenu}
     >
     </HeaderLayout>
