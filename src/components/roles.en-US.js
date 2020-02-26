@@ -15,12 +15,18 @@ const RolesUS = (props) => {
                 }
             }
         }
-        allContentfulRole(filter: {node_locale: {eq: "en-US"}}) {
+        allContentfulRole(filter: {node_locale: {eq: "de"}}) {
             edges {
                 node {
                     roleTitle
                     roleSummary {
                         json
+                    }
+                    roleImage {
+                        file {
+                            fileName
+                            url
+                        }
                     }
                 }
             }
