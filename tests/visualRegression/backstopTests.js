@@ -55,6 +55,19 @@ module.exports = {
         misMatchThreshold: 0.1,
       },
       {
+        label: 'EE DE clients',
+        url: 'http://localhost:8000/stubbedComponents/clients',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+          '.main-container'
+        ],
+        readyEvent: "componentLoaded",
+        delay: 1000,
+        misMatchThreshold: 0.1,
+      },
+      {
         label: 'EE DE contact',
         url: 'http://localhost:8000/stubbedComponents/contact',
         hideSelectors: [],

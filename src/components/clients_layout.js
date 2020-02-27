@@ -6,7 +6,7 @@ const Clients = (props) => (
     <h2 className={"module_heading"}>{props.title}</h2>
     <ul className={"client_list"}>
         {props.clientData.map((item) => {
-        return (<li className={"client_item"} key={item.name}><img src={item.url} alt={item.name}/></li>)  
+        return (<li className={"client_item"} key={item.title}><img src={item.file.url} alt={item.title}/></li>)  
         })}
     </ul>
   </div>
