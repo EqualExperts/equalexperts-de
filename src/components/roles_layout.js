@@ -3,7 +3,7 @@ import React from "react";
 const Roles = (props) => (
   <div>
     <div className={"module roles"}>
-      <a className={"inPageLink"} name={props.rolesIntroContent.rolesTitle} />
+      <a href={`#${props.rolesIntroContent.rolesTitle}`} className={"inPageLink"} name={props.rolesIntroContent.rolesTitle}>&nbsp;</a>
       <h2 className={"module_heading"}>{props.rolesIntroContent.rolesTitle}</h2>
       {props.rolesIntroContent.rolesIntroduction.json.content.map(item => {
           return item.content.map(content => {
