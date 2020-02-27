@@ -26,6 +26,28 @@ const Footer = (props) => (
             })}
         </nav>  
     </div>
+    <div className="footer-content footer-langSwitcher">
+        <nav role="navigation">
+            <ul className="legal-navigation">
+                 {props.switcherLinks.map((lang, i) => {
+                        let link = lang.link;
+                        if(lang.langKey === "de") {
+                          link = "/";
+                        }
+                        return (
+                          <li key={`langSelector_${i}`}>
+                              <Link to={link}>
+                                <span selected={lang.selected}>
+                                    {lang.langKey === 'de'?'DE':'EN'}
+                                </span>
+                              </Link>
+                          </li>
+                          );
+                        }
+                )}
+            </ul>
+        </nav>
+    </div>
     <div className="footer-content">
         <nav role="navigation">
             <ul className="legal-navigation">

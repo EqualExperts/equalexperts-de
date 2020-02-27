@@ -44,11 +44,25 @@ class IndexPage extends React.Component {
       }
     ];
 
+    const langsMenu = [
+      {
+        langKey: "de",
+        selected: true,
+        link: "/de/"
+      },
+      {
+        langKey: "en-US",
+        selected: false,
+        link: "/en-US/"
+      }
+    ];
+
     return (
       <div className={`main-container`}>
         <FooterLayout
           navLinks={navLinks}
           legalLinks={legalLinks}
+          switcherLinks={langsMenu}
         >
         </FooterLayout>
       </div>
