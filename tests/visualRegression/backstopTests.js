@@ -93,6 +93,19 @@ module.exports = {
         readyEvent: "componentLoaded",
         delay: 1000,
         misMatchThreshold: 0.1,
+      },
+      {
+        label: 'EE DE Legal Module (Imprint)',
+        url: 'http://localhost:8000/stubbedComponents/legal',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+            '.main-container'
+        ],
+        readyEvent: "componentLoaded",
+        delay: 1000,
+        misMatchThreshold: 0.1,
       }
     ],
     paths: {

@@ -496,6 +496,15 @@ p{
   margin: 0 auto;
 }
 
+.legalModule {
+
+  padding: 25px;
+
+  p{
+    white-space: pre-wrap;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     
@@ -581,6 +590,7 @@ p{
     }
   
   }
+
   .blog{
     &__container{
       max-width: 1024px;
@@ -625,6 +635,7 @@ p{
       padding: 1em 5em 2em 5em;
     }
   }
+
   .contact{
     &__address{
       margin-left: 5%;
