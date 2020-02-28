@@ -17,11 +17,11 @@ class IndexPage extends React.Component {
       },
       {
         "navItemText": "Empowerment and Tech",
-        "navItemUrl": "/"
+        "navItemUrl": "something"
       },
       {
         "navItemText": "blog",
-        "navItemUrl": "/blog/"
+        "navItemUrl": "blog/"
       },
       {
         "navItemText": "kontact",
@@ -32,34 +32,24 @@ class IndexPage extends React.Component {
     const legalLinks = [
       {
         "navItemText": "Datenschutz",
-        "navItemUrl": "/datenschutz/"
+        "navItemUrl": "datenschutz/"
       },
       {
         "navItemText": "Impressum",
-        "navItemUrl": "/impressum"
+        "navItemUrl": "impressum"
       },
       {
         "navItemText": "Modern Slavery Policy",
-        "navItemUrl": "/modernSlaveryPolicy"
+        "navItemUrl": "modernSlaveryPolicy"
       }
     ];
 
-    const langsMenu = [
-      {
-        langKey: "de",
-        selected: true,
-        link: "/de/"
-      },
-      {
-        langKey: "en-US",
-        selected: false,
-        link: "/en-US/"
-      }
-    ];
+    const langsMenu = ["de", "en-US"];
 
     return (
       <div className={`main-container`}>
         <FooterLayout
+          homeLink={"/"}
           navLinks={navLinks}
           legalLinks={legalLinks}
           switcherLinks={langsMenu}

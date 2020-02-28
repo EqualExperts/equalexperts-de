@@ -6,18 +6,7 @@ import "../../styles/index.scss"
 class IndexPage extends React.Component {
   render() {
 
-    const langsMenu = [
-      {
-        langKey: "de",
-        selected: true,
-        link: "/de/"
-      },
-      {
-        langKey: "en-US",
-        selected: false,
-        link: "/en-US/"
-      }
-    ];
+    const langsMenu = ["de", "en-US"];
    
     const navLinks = [
       {
@@ -30,11 +19,11 @@ class IndexPage extends React.Component {
       },
       {
         "navItemText": "Empowerment and Tech",
-        "navItemUrl": "/"
+        "navItemUrl": "something"
       },
       {
         "navItemText": "blog",
-        "navItemUrl": "/blog/"
+        "navItemUrl": "blog/"
       },
       {
         "navItemText": "kontact",
@@ -45,6 +34,7 @@ class IndexPage extends React.Component {
     return (
       <div className={`main-container`}>
         <HeaderLayout
+          homeLink={"/"}
           navLinks={navLinks}
           switcherLinks={langsMenu}
         />

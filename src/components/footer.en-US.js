@@ -1,7 +1,7 @@
 import {graphql, useStaticQuery} from "gatsby"
 import React from "react"
 import FooterLayout from "./footer_layout";
-import {getCurrentLangKey, getLangs, getUrlForLang} from "ptz-i18n";
+import {getCurrentLangKey} from "ptz-i18n";
 
 const FooterUS = () => {
     const dataQuery = useStaticQuery(graphql`
@@ -41,13 +41,13 @@ const FooterUS = () => {
       const url = typeof window !== 'undefined' ? window.location.pathname : '';
       const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
       const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-      const homeLink = `/${langKey}/`;
-      const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+      const homeLink = (langKey === defaultLangKey) ? '' : `/${langKey}/`;
     return (
       <FooterLayout
+            homeLink={homeLink}
             navLinks={dataQuery.allContentfulMainNav.edges[0].node.navItems}
             legalLinks={dataQuery.allContentfulLegalNav.edges[0].node.navItems}
-            switcherLinks={langsMenu}
+            switcherLinks={langs}
       >
       </FooterLayout>
     );

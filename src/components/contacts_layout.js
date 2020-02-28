@@ -11,7 +11,11 @@ const Clients = (props) => (
       })}
     </div>
     <div className="contact_locations">
-      <a href={`#${props.contactCopy.contactSectionHeading}`} className={"inPageLink"} name={props.contactCopy.contactSectionHeading}>&nbsp;</a>
+      <a 
+        href={`#${props.contactCopy.contactSectionHeading}`} 
+        className={"inPageLink"} 
+        name={props.contactCopy.contactSectionHeading}
+        id={props.contactCopy.contactSectionHeading}>&nbsp;</a>
       <h2 className="module_heading">{props.contactCopy.contactSectionHeading}</h2>
       <div className="contact_locationsContainers">
         {props.officeLocations.map(location => {

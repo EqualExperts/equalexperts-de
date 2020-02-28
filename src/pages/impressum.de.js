@@ -11,7 +11,6 @@ class ImprintPage extends React.Component {
     
     const { data } = this.props;
     const pageData = data.allContentfulModuleTitleAndText.edges[0].node;
-    console.log(JSON.stringify(pageData));
     return (
       <LayoutDe location={this.props.location}>
         <SEO title={pageData.title} />

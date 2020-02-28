@@ -50,6 +50,16 @@ class IndexPage extends React.Component {
       </LayoutEn>
     )
   }
+  componentDidMount() {
+    const { hash } = window.location;
+    if (hash !== '') {
+      setTimeout(() => {
+        const id = decodeURI(hash.replace('#', ''));
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView();
+      }, 0);
+    }
+  }
 }
 
 export default IndexPage

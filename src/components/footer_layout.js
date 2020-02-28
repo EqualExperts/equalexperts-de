@@ -19,9 +19,9 @@ const Footer = (props) => (
         <nav role="navigation" className="footer-navigation">
             {props.navLinks.map(item => {
                 if(item.navItemUrl.indexOf("#") !== -1) {
-                    return (<a href={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</a>);
+                    return (<a href={props.homeLink+item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</a>);
                 } else {
-                    return (<Link to={item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</Link>);
+                    return (<Link to={props.homeLink+item.navItemUrl} key={`navItem_${item.navItemUrl}`} className={`footer__navigation-link`}>{item.navItemText}</Link>);
                 }
             })}
         </nav>  
@@ -30,20 +30,20 @@ const Footer = (props) => (
         <nav role="navigation">
             <ul className="legal-navigation">
                  {props.switcherLinks.map((lang, i) => {
-                        let link = lang.link;
-                        if(lang.langKey === "de") {
-                          link = "/";
-                        }
-                        return (
-                          <li key={`langSelector_${i}`}>
-                              <Link to={link}>
-                                <span selected={lang.selected}>
-                                    {lang.langKey === 'de'?'DE':'EN'}
-                                </span>
-                              </Link>
-                          </li>
-                          );
-                        }
+                    let link = `/${lang}/`;
+                    if(lang === "de") {
+                      link = link.replace(/\/de/g, "");
+                    }
+                    return (
+                        <li key={`langSelector_${i}`}>
+                            <Link to={link}>
+                            <span>
+                                {lang === 'de' ? 'DE' : 'EN'}
+                            </span>
+                            </Link>
+                        </li>
+                        );
+                    }
                 )}
             </ul>
         </nav>
@@ -52,7 +52,7 @@ const Footer = (props) => (
         <nav role="navigation">
             <ul className="legal-navigation">
                 {props.legalLinks.map(item => {
-                    return(<li className="legal-navigation__item" key={`legalItem_${item.navItemUrl}`}><Link to={item.navItemUrl}>{item.navItemText}</Link></li>);
+                    return(<li className="legal-navigation__item" key={`legalItem_${item.navItemUrl}`}><Link to={props.homeLink+item.navItemUrl}>{item.navItemText}</Link></li>);
                 })}
             </ul>
         </nav>
