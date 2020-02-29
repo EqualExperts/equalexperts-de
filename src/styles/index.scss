@@ -411,7 +411,6 @@ p{
 .blogs{
   &__list {
     list-style-type: none;
-    padding:20px;
     li{
       padding-bottom: 10px;
       span{
@@ -472,7 +471,7 @@ p{
   }
 
   &__title{
-    padding: 10px 30px;
+    padding: 10px 0;
     h3{
       font-size: 1.2em;
     }
@@ -506,6 +505,17 @@ p{
 
   p{
     white-space: pre-wrap;
+  }
+}
+
+.articlesList {
+  padding: 25px;
+
+  &_metaData {
+    span {
+      color : $black;
+      font-size: 0.8em;
+    }
   }
 }
 
@@ -619,9 +629,6 @@ p{
     }
     &__author{
       font-style: italic;
-    }
-    &__date{
-
     }
     &__content{
       padding-top:2em;

@@ -106,6 +106,19 @@ module.exports = {
         readyEvent: "componentLoaded",
         delay: 1000,
         misMatchThreshold: 0.1,
+      },
+      {
+        label: 'EE DE Article List Module',
+        url: 'http://localhost:8000/stubbedComponents/articlesList',
+        hideSelectors: [],
+        removeSelectors: [],
+        selectorExpansion: true,
+        selectors: [
+            '.main-container'
+        ],
+        readyEvent: "componentLoaded",
+        delay: 1000,
+        misMatchThreshold: 0.1,
       }
     ],
     paths: {

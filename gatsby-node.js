@@ -21,7 +21,7 @@ exports.createPages =({graphql, boundActionCreators}) =>{
                 result.data.allContentfulBlogPost.edges.forEach((edge)=> {
                     edge.node.node_locale === "de"?
                         createPage({
-                            path: "/de/"+ edge.node.slug,
+                            path: "/"+ edge.node.slug,
                             component: BlogPostTemplateDe,
                             context: {
                                 slug: edge.node.slug,
