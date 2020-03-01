@@ -539,8 +539,8 @@ p{
 }
 
 .legalModule {
-
   padding: 25px;
+  max-width: 1024px;
 
   p{
     white-space: pre-wrap;
@@ -549,6 +549,7 @@ p{
 
 .articlesList {
   padding: 25px;
+  max-width: 1024px;
 
   &_metaData {
     span {
@@ -736,13 +737,13 @@ p{
   }
 
   .simple-text-module {
-    max-width: 80%;
+    max-width: 1024px;
   }
 
   .module{
   
     &_intro {
-      max-width: 80%;
+      max-width: 1024px;
     }
   
   }

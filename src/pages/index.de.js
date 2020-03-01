@@ -32,7 +32,7 @@ class IndexPage extends React.Component {
         <Clients></Clients>
         <Contacts></Contacts>
         <Roles></Roles>
-        {
+        {/* {
           modules.map((module) => {
             return (
               <div className={`module`} key={module}>
@@ -46,7 +46,7 @@ class IndexPage extends React.Component {
 
             )
           })
-        }
+        } */}
       </LayoutDe>
     )
   }
