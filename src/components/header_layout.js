@@ -7,7 +7,7 @@ const HeaderLayout = (props) => {
         <header className={`header`}>
             <div className={`header__content-wrapper`}>
                 <div className={`header__logoWrapper`}>
-                  <Link to={'/'}>
+                  <Link to={props.homeLink}>
                       <img className={`header__logo`} src={image} alt={`Equal Experts logo`} />
                   </Link>
                 </div>
