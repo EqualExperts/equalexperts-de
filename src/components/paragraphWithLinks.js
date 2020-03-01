@@ -8,9 +8,11 @@ const ParagraphWithLinks = (props) => (
       if(item.match(isURL)) {
         const link = item.match(/\/\//g) ? item : "//"+item;
         return(<a href={link} key={`link_${link}`}>{item}</a>);
-      } else {
+      } else if (item) {
         const hash = shortHash(item);
         return(<React.Fragment key={hash}>{item}</React.Fragment>);
+      } else {
+        return([]);
       }
     })}
   </p>
