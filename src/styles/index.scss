@@ -369,28 +369,65 @@ p{
 }
 
 .blog{
-  &__container{
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 2em 1em;
-    box-sizing: border-box;
+
+  &__hero {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    min-height: 30vh;
+    padding: 0 25px;
+
+    &__container {
+      display: flex;
+      flex-direction:column;
+      justify-content: space-between;
+      width: 1024px;
+    }
   }
+
+  &__contentWrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    &__container{
+      max-width: 1024px;
+    }
+
+  }
+
   &__title{
-    text-align: center;
+    color : $greyBlue;
+    text-align: left;
     font-size: 2.5em;
   }
+
   &__author-date-wrapper{
-    display: flex;
+    
     align-items: center;
-    justify-content: center;
-    padding-top:2em;
-    p{
-      padding: 0 1em;
+    display: flex;
+    font-size: 0.8em;
+    padding: 25px 0;
+    p {
+      color : $greyBlue;
+      padding: 0;
+      margin: 0;
       font-size: 1.2em;
     }
   }
+  &__author-date-separator {
+    margin: 0 1em;
+  }
   &__author{
     font-style: italic;
+  }
+  &__postOverview{
+    color : $black;
+    font-weight: bold;
+    margin-bottom: 25px;
   }
   &__content{
     padding-top:2em;
@@ -407,7 +444,9 @@ p{
   &__slug{
 
   }
+  
 }
+
 .blogs{
   &__list {
     list-style-type: none;
@@ -606,27 +645,12 @@ p{
   }
 
   .blog{
-    &__container{
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 4em 8em;
-      box-sizing: border-box;
-      font-size: 1.2em;
-    }
+
     &__title{
-      text-align: center;
-      font-size: 2.5em;
-      padding: 0 1em;
+      font-size: 3em;
+      width: 50%;
     }
-    &__author-date-wrapper{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-top:2em;
-      p{
-        padding: 0 1em;
-      }
-    }
+
     &__author{
       font-style: italic;
     }

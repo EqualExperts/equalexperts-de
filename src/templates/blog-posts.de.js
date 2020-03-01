@@ -1,24 +1,23 @@
 import React from "react"
 import {graphql} from "gatsby"
-import HeaderDe from "../components/header.de-DE";
-import FooterDe from "../components/footer.de-DE";
+import LayoutDe from "../components/layout.de-DE"
+import ArticleLayout from "../components/article_layout"
 
 const BlogPost = (props) => {
         const {data} = props;
         const blogPost = data.contentfulBlogPost;
         const date =new Date(Date.parse(blogPost.blogDate));
         return (
-            <div>
-                <HeaderDe />
-                <div className={`blog__container`}>
-                    <h1 className={`blog__title`}>{blogPost.blogTitle}</h1>
-                    <div className={`blog__author-date-wrapper`}>
-                        <p className={`blog__author`}>{blogPost.blogAuthor}</p> | <p className={`blog__date`}>{date.toDateString()}</p>
-                    </div>
-                    <p className={`blog__content`} dangerouslySetInnerHTML={{__html:blogPost.blogContent.childContentfulRichText.html}}></p>
-                </div>
-                <FooterDe />
-            </div>
+          <LayoutDe location={props.location}>
+            <ArticleLayout
+              heroImage={blogPost.heroImage}
+              blogTitle={blogPost.blogTitle}
+              blogAuthor={blogPost.blogAuthor}
+              date={date}
+              blogPostOverview={blogPost.blogPostOverview}
+              blogContent={blogPost.blogContent.json.content}
+            />
+          </LayoutDe>
         )
 }
 export default BlogPost
@@ -31,10 +30,17 @@ export const pageQuery = graphql`
             blogAuthor
             slug
             node_locale
-            blogContent {
-              childContentfulRichText {
-                html
+            heroImage {
+              file {
+                fileName
+                url
               }
+            }
+            blogPostOverview {
+              blogPostOverview
+            }
+            blogContent {
+              json
             }
           }
     }

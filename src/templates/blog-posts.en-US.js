@@ -9,7 +9,7 @@ const BlogPost = (props) => {
         const date =new Date(Date.parse(blogPost.blogDate));
     return (
         <div>
-            <HeaderEn />
+            <HeaderEn/>
             <div className={`blog__container`}>
                 <h1 className={`blog__title`}>{blogPost.blogTitle}</h1>
                 <div className={`blog__author-date-wrapper`}>
@@ -31,6 +31,12 @@ export const pageQuery = graphql`
             blogAuthor
             slug
             node_locale
+            heroImage {
+              file {
+                fileName
+                url
+              }
+            }
             blogContent {
               childContentfulRichText {
                 html
