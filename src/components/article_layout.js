@@ -25,7 +25,7 @@ const articleLayout = (props) => (
           return item.content.map((content, j) => {
             if(item.nodeType === "heading-3") {
               return (<h3 key={`legalHeading_${i}_${j}`}>{content.value}</h3>);
-            } else if(item.nodeType === "paragraph") {
+            } else if(item.nodeType === "paragraph" && content.value) {
               return (<ParagraphWithLinks key={`legalPara_${i}_${j}`} content={content.value}/>);
             }
             return [];
