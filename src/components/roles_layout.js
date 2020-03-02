@@ -18,7 +18,7 @@ const Roles = (props) => (
     </div>
     <div className="roleTypes">
       {props.roles.map(role => {
-        let uri = encodeURI(`/roles/${role.node.roleTitle}`);
+        let uri = encodeURI(`${props.homeLink}${role.node.roleLink}`);
         let key = `roleType_${role.node.roleTitle}`;
         let image = "";
         if(role.node.roleImage) {
@@ -31,9 +31,7 @@ const Roles = (props) => (
             }}
             key={key}
             href={uri} 
-            className={"roleTypes_type"} 
-            target="_blank"
-            rel="noopener noreferrer"
+            className={"roleTypes_type"}
             >{role.node.roleTitle}</a>
         )
       })}

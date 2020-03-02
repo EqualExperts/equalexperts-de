@@ -1,4 +1,4 @@
-import {graphql, useStaticQuery, withPrefix} from "gatsby"
+import {graphql, useStaticQuery} from "gatsby"
 import React from "react"
 import {getCurrentLangKey} from "ptz-i18n";
 import HeaderLayout from "./header_layout";
@@ -32,7 +32,6 @@ const HeaderDe = () => {
     const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
     let homeLink = (langKey === defaultLangKey) ? '/' : `/${langKey}/`;
-    homeLink = withPrefix(homeLink);
   return (
     <HeaderLayout
       homeLink={homeLink}

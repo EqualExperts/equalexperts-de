@@ -1,4 +1,4 @@
-import {graphql, useStaticQuery, withPrefix} from "gatsby"
+import {graphql, useStaticQuery} from "gatsby"
 import React from "react"
 import FooterLayout from "./footer_layout";
 import {getCurrentLangKey} from "ptz-i18n";
@@ -42,8 +42,6 @@ const FooterUS = () => {
       const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
       const langKey = getCurrentLangKey(langs, defaultLangKey, url);
       let homeLink = (langKey === defaultLangKey) ? '' : `/${langKey}/`;
-      homeLink = withPrefix(homeLink);
-
     return (
       <FooterLayout
             homeLink={homeLink}
