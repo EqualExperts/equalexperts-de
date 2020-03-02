@@ -23,7 +23,7 @@ const Clients = (props) => (
             <div className={"contact_location"} key={location.node.city}>
               <h3 className="contact__region">{location.node.region}</h3>
               <h4 className="contact__city">{location.node.city}</h4>
-              <a className="contact__tel" href="tel:">{location.node.tel}</a>
+              <a className="contact__tel" href={`tel:${location.node.tel}`}>{location.node.tel}</a>
               <a className="contact__email" href="mailto:{location.node.email}">{location.node.email}</a>
               {/* <a href={location.node.link} className="btn btn--secondary">
                   {location.node.linkText}
