@@ -21,9 +21,6 @@ const RolesDe = (props) => {
                     node {
                         roleTitle
                         roleLink
-                        roleSummary {
-                            json
-                        }
                         roleImage {
                             file {
                                 fileName
