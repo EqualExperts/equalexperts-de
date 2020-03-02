@@ -11,7 +11,7 @@ import {graphql} from "gatsby"
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const modules = data.allContentfulModuleTextandCta.edges;
+    //const modules = data.allContentfulModuleTextandCta.edges;
     const heroModule = data.allContentfulHeroModule.edges;
     const textModule= data.allContentfulModuleTextOnly.edges[0];
     return (
