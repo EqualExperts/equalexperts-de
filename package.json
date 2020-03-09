@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "backstopjs": "^4.4.2",
     "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",

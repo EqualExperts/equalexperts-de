@@ -52,12 +52,124 @@ class ArticlePage extends React.Component {
               "content": [
                 {
                   "data": {},
-                  "marks": [],
-                  "value": "\nDa sich die durch das Arbeiten aus der Ferne entstandenen Reibungsverluste rasch auflösen und die Generation von Arbeitnehmern, die mit dem Online-Spiel aufgewachsen sind, in die Arbeitswelt eintritt, wird das Arbeiten aus der Ferne zu einem immer wichtigeren Teil unseres Arbeitslebens werden. Mit den richtigen Werkzeugen, Praktiken und der richtigen Denkweise können die einstmals erheblichen Vorteile, die das Arbeiten an einem gemeinsamen Standort bietet, so weit reduziert werden, dass bei der Bildung Ihres nächsten Teams die Fernarbeit eine wichtige Rolle spielen sollte.",
-                  "nodeType": "text"
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Test Item 1",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "nodeType": "list-item"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Test Item 2",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "nodeType": "list-item"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Test Item 3",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "nodeType": "list-item"
                 }
               ],
-              "nodeType": "paragraph"
+              "nodeType": "unordered-list"
+            },
+            {
+              "data": {
+                "target": {
+                  "sys": {
+                    "space": {
+                      "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "c2mx9j3gfirje",
+                        "contentful_id": "2mx9j3gfirje"
+                      }
+                    },
+                    "id": "c5sNOB1gjOui2loVgUR9a0v",
+                    "type": "Asset",
+                    "createdAt": "2020-03-09T10:56:24.870Z",
+                    "updatedAt": "2020-03-09T10:56:24.870Z",
+                    "environment": {
+                      "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment",
+                        "contentful_id": "master"
+                      }
+                    },
+                    "revision": 1,
+                    "contentful_id": "5sNOB1gjOui2loVgUR9a0v"
+                  },
+                  "fields": {
+                    "title": {
+                      "de": "Agile Maturity Model",
+                      "en-US": "Agile Maturity Model"
+                    },
+                    "file": {
+                      "de": {
+                        "url": "//images.ctfassets.net/2mx9j3gfirje/5sNOB1gjOui2loVgUR9a0v/bbf57530f18033c466e43ca224ec505f/Agile-Maturity-Model3.jpg",
+                        "details": {
+                          "size": 75728,
+                          "image": {
+                            "width": 1875,
+                            "height": 458
+                          }
+                        },
+                        "fileName": "Agile-Maturity-Model3.jpg",
+                        "contentType": "image/jpeg"
+                      },
+                      "en-US": {
+                        "url": "//images.ctfassets.net/2mx9j3gfirje/5sNOB1gjOui2loVgUR9a0v/5896101bcbc1cf93becc95de3383440b/Agile-Maturity-Model3.jpg",
+                        "details": {
+                          "size": 75728,
+                          "image": {
+                            "width": 1875,
+                            "height": 458
+                          }
+                        },
+                        "fileName": "Agile-Maturity-Model3.jpg",
+                        "contentType": "image/jpeg"
+                      }
+                    }
+                  }
+                }
+              },
+              "content": [],
+              "nodeType": "embedded-asset-block"
             },
             {
               "data": {},
@@ -65,12 +177,53 @@ class ArticlePage extends React.Component {
                 {
                   "data": {},
                   "marks": [],
-                  "value": "\nTeilen Sie Ihre Gedanken mit uns, finden Sie Updates, Vorlagen und andere Informationen unter www.equalexperts.com, oder nehmen Sie Kontakt mit uns auf, wenn Sie an einer Zusammenarbeit mit uns interessiert sind.",
+                  "value": "Teilen Sie Ihre Gedanken mit uns, finden Sie Updates, Vorlagen und andere Informationen unter ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {
+                    "uri": "www.equalexperts.com"
+                  },
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "www.equalexperts.com",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": ", oder nehmen Sie ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {
+                    "uri": "//#Kontakten"
+                  },
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Kontakt mit uns",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "hyperlink"
+                },
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": " auf, wenn Sie an einer Zusammenarbeit mit uns interessiert sind.",
                   "nodeType": "text"
                 }
               ],
               "nodeType": "paragraph"
             }
+        
           ],
           "nodeType": "document"
         }
@@ -85,7 +238,7 @@ class ArticlePage extends React.Component {
            blogAuthor={blogPost.blogAuthor}
            date={new Date(blogPost.blogDate)}
            blogPostOverview={blogPost.blogPostOverview}
-           blogContent={blogPost.blogContent.json.content}
+           blogContent={blogPost.blogContent.json}
         />
       </div>
     )

@@ -400,9 +400,9 @@ p{
   }
 
   &__title{
-    color : $greyBlue;
+    color : $black;
     text-align: left;
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   &__author-date-wrapper{
@@ -441,10 +441,25 @@ p{
       font-size: 1.5em;
     }
   }
-  &__slug{
 
+  &__list {
+    color: primaryBlue;
+    list-style-type: square;
+    margin-left: 25px;
+  }
+
+  &__image{
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
   }
   
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .blogs{

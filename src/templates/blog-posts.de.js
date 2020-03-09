@@ -15,7 +15,7 @@ const BlogPost = (props) => {
               blogAuthor={blogPost.blogAuthor}
               date={date}
               blogPostOverview={blogPost.blogPostOverview}
-              blogContent={blogPost.blogContent.json.content}
+              blogContent={blogPost.blogContent.json}
             />
           </LayoutDe>
         )
