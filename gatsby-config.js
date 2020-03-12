@@ -12,6 +12,7 @@ module.exports = {
     title: `Equal Experts`,
     description: `Making software better`,
     author: `devs@equalexperts`,
+    siteUrl: `https://www.equalexperts.de`,
     languages,
   },
   plugins: [
@@ -36,6 +37,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.equalexperts.de',
+        sitemap: 'https://www.equalexperts.de/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: ['/'] }]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -16,7 +16,10 @@ class IndexPage extends React.Component {
     const textModule= data.allContentfulModuleTextOnly.edges[0];
     return (
       <LayoutEn location={this.props.location}>
-        <SEO title="Home" />
+        <SEO 
+          title="Equal Experts DE || Home"
+          image={heroModule[0].node.heroImage.file.url}
+        />
         {heroModule.map((module) => {
           const headingParts = module.node.heroHeading.split(/(?<=\.)/);
           return (

@@ -52,34 +52,3 @@ const articleLayout = (props) => (
 
 
 export default articleLayout
-
-// {props.blogContent.map((item,i) => {
-//   if(item.nodeType === "embedded-asset-block") {
-//     let image = item.data.target.fields.file.de,
-//         title = item.data.target.fields.title.de;
-//     return(<div className="blog__image"><img src={image.url} title={title} /></div>);
-//   } else {
-    
-//     let nodes = item.content.map((content, j) => {
-//       if(item.nodeType === "heading-3") {
-//         return (<h3 key={`legalHeading_${i}_${j}`}>{content.value}</h3>);
-//       } else if(item.nodeType === "paragraph" && content.value) {
-//         return (<ParagraphWithLinks key={`legalPara_${i}_${j}`} content={content.value}/>);
-//       } else if(item.nodeType === "unordered-list") {
-//         let listItems = content.content[0].content.map((content, k) => {
-//           console.log(content);
-//           return (<ParagraphWithLinks key={`blogListPara_${i}_${j}_${k}`} content={content.value}/>);
-//         });
-//         return (<li>{listItems}</li>);
-//       }
-//       return [];
-//     });
-
-//     if(item.nodeType === "unordered-list") {
-//       return(<ul>{nodes}</ul>)
-//     } else {
-//       return nodes;
-//     }
-
-//   }
-// })}
