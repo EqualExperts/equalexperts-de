@@ -200,7 +200,9 @@ p{
 .contact {
 
   &_locations {
-    background : url(https://www.equalexperts.com/wp-content/uploads/2018/07/EE_Germany.jpg) center center no-repeat;
+    background-color : $secondaryYellow;
+    background-repeat : no-repeat;
+    background-position: center center;
     background-size: cover;
     padding: 2.5em 0;
     text-align: center;

@@ -10,7 +10,7 @@ const Clients = (props) => (
           })
       })}
     </div>
-    <div className="contact_locations">
+    <div className="contact_locations" style={{backgroundImage : `url('${props.contactCopy.contactBackgroundImage.file.url}')`}}>
       <a 
         href={`#${props.contactCopy.contactSectionHeading}`} 
         className={"inPageLink"} 

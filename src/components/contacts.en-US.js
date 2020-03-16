@@ -13,6 +13,13 @@ const Contact = (props) => {
                         json
                     }
                     contactSectionHeading
+                    contactBackgroundImage {
+                        title
+                        description
+                        file {
+                            url
+                        }
+                    }
                 }
             }
         }

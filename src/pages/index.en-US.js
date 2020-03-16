@@ -17,7 +17,7 @@ class IndexPage extends React.Component {
     return (
       <LayoutEn location={this.props.location}>
         <SEO 
-          title="Equal Experts DE || Home"
+          title="Home"
           image={heroModule[0].node.heroImage.file.url}
         />
         {heroModule.map((module) => {
