@@ -32,7 +32,12 @@ class IndexPage extends React.Component {
           ]
         }
       },
-      "contactSectionHeading": "Kontakten"
+      "contactSectionHeading": "Kontakten",
+      "contactBackgroundImage" : {
+        "file" : {
+          "url" : "http://images.ctfassets.net/2mx9j3gfirje/7GnlugQa38iGQ4WtMGsBIr/f69241f8894dbd782b5e49f4da49e913/EE_Germany.jpg"
+        }
+      }
     };
 
     const officeLocations = [

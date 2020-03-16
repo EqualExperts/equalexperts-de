@@ -3,6 +3,7 @@ import {useStaticQuery, graphql} from "gatsby"
 import HeaderDe from "../components/header.de-DE";
 import ArticleList from "../components/articleList_layout";
 import FooterDe from "../components/footer.de-DE";
+import "../styles/index.scss"
 import {getCurrentLangKey} from "ptz-i18n";
 
 const BlogListDe = ({ children, location }) => {

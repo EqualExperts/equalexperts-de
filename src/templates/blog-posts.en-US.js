@@ -2,6 +2,7 @@ import React from "react"
 import {graphql} from "gatsby"
 import LayoutUS from "../components/layout.en-US"
 import SEO from "../components/seo"
+import "../styles/index.scss"
 import ArticleLayout from "../components/article_layout"
 
 const BlogPost = (props) => {

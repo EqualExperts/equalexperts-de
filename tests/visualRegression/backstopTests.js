@@ -5,6 +5,8 @@ module.exports = {
         headless: true,
     },
     "puppeteerOffscreenCaptureFix" : true,
+    asyncCaptureLimit: 2,
+    asyncCompareLimit : 2,
     viewports: [
       {
         name: 'phone',
@@ -64,7 +66,7 @@ module.exports = {
           '.main-container'
         ],
         readyEvent: "componentLoaded",
-        delay: 1000,
+        delay: 1500,
         misMatchThreshold: 0.1,
       },
       {
@@ -77,7 +79,7 @@ module.exports = {
           '.main-container'
         ],
         readyEvent: "componentLoaded",
-        delay: 1000,
+        delay: 2000,
         misMatchThreshold: 0.1,
       },
       {
@@ -130,7 +132,7 @@ module.exports = {
             '.main-container'
         ],
         readyEvent: "componentLoaded",
-        delay: 1000,
+        delay: 2000,
         misMatchThreshold: 0.1,
       }
     ],
