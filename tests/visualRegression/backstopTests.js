@@ -79,7 +79,7 @@ module.exports = {
           '.main-container'
         ],
         readyEvent: "componentLoaded",
-        delay: 2000,
+        delay: 1500,
         misMatchThreshold: 0.1,
       },
       {
