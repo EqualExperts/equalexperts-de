@@ -26,14 +26,14 @@ const Services = (props) => {
         />
         <ServiceLayout
           heroImage={services.heroImage}
-          topicTitle={services.topicTitle}
-          shortExplanation={services.shortExplanation.shortExplanation}
-          whyNow={services.whyNow.json}
-          whatYouGetHeading={services.whatYouGetHeading}
+          topicTitle={services.topicTitle || ""}
+          shortExplanation={services.shortExplanation.shortExplanation || ""}
+          whyNow={services.whyNow.json || {}}
+          whatYouGetHeading={services.whatYouGetHeading || ""}
           whatYouGetIcon={services.whatYouGetIcon}
-          whatYouGet={services.whatYouGet}
-          whyEEHeading={services.whyEeHeading}
-          ourUsps={services.ourUsps}
+          whatYouGet={services.whatYouGet || []}
+          whyEEHeading={services.whyEeHeading || ""}
+          ourUsps={services.ourUsps || []}
         />
       </LayoutDe>
     )
