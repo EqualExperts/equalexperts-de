@@ -460,6 +460,173 @@ p{
   
 }
 
+.services {
+
+  &__hero {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    min-height: 30vh;
+    padding: 0 25px;
+
+    &__container {
+      display: flex;
+      flex-direction:column;
+      justify-content: space-between;
+      width: 1024px;
+    }
+  }
+
+  &__contentWrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    &__container{
+      max-width: 1024px;
+    }
+
+  }
+
+  &__title{
+    color : $white;
+    text-align: left;
+    font-size: 2em;
+  }
+
+  &__postOverview{
+    color : $midLightGrey;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    max-width: 768px;
+  }
+  &__content{
+    padding-top:2em;
+    p{
+      line-height: 1.5;
+      text-align: justify;
+      padding: 0.5em 0;
+    }
+    h3{
+      padding:1em 0 0.5em 0;
+      font-size: 1.5em;
+    }
+  }
+
+  &__list {
+    color: primaryBlue;
+    list-style-type: square;
+    margin-left: 25px;
+  }
+
+  &__image{
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__blockCallouts {
+    display : flex;
+    flex-direction: column;
+  }
+
+  &__blockCallout {
+    align-items: center;
+    background-color: $darkGrey;
+    background-position : center 30%;
+    background-repeat : no-repeat;
+    background-size : 1.5em;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    justify-content: center;
+    padding: 4em 1em 1em 1em;
+    margin: 25px;
+    text-align: center;
+    width: auto;
+  }
+
+  &__blockCallout:nth-child(1) { 
+    background-color: $category-all;
+  }
+
+  &__blockCallout:nth-child(2) { 
+    background-color: $category-ee-life;
+  }
+
+  &__blockCallout:nth-child(3) { 
+    background-color: $category-our-thinking;
+  }
+
+  &__blockCallout:nth-child(4) { 
+    background-color: $category-tech-focus;
+  }
+
+  &__blockCallout:nth-child(5) { 
+    background-color: $category-whats-new;
+  }
+
+  &__uspsWrapper {
+    background-color: $lightestGrey;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+  }
+
+  &__uspsContainer {
+    max-width: 1024px;
+  }
+
+  &__usps {
+    margin : 25px 0;
+  }
+
+  &__usp {
+    margin : 50px 0;
+  }
+
+  &__decorativeBar {
+    background-color: $category-all;
+    height: 2px;
+    width: 75px;
+  }
+
+  &__usp:nth-child(1) .services__decorativeBar { 
+    background-color: $category-all;
+  }
+
+  &__usp:nth-child(2) .services__decorativeBar { 
+    background-color: $category-ee-life;
+  }
+
+  &__usp:nth-child(3) .services__decorativeBar { 
+    background-color: $category-our-thinking;
+  }
+
+  &__usp:nth-child(4) .services__decorativeBar { 
+    background-color: $category-tech-focus;
+  }
+
+  &__usp:nth-child(5) .services__decorativeBar { 
+    background-color: $category-whats-new;
+  }
+
+  &__uspHeading {
+    color: $darkGrey;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin : 12px 0;
+  }
+  
+}
+
 .bold {
   font-weight: bold;
 }
@@ -689,6 +856,29 @@ p{
     }
   }
 
+  .services {
+
+    &__title{
+      font-size: 3em;
+      width: 50%;
+    }
+    &__content{
+      padding-top:2em;
+      p{
+        line-height: 1.5;
+        text-align: justify;
+        padding: 0.5em 0;
+      }
+      h3{
+        padding:1em 0 0.5em 0;
+        font-size: 1.5em;
+      }
+    }
+    &-list__content{
+      padding: 1em 5em 2em 5em;
+    }
+  }
+
   .contact{
     &__address{
       margin-left: 5%;
@@ -720,7 +910,8 @@ p{
     }
   }
 
-  .blog__hero {
+  .blog__hero,
+  .services__hero {
     min-height: 50vh;
   }
 
@@ -751,6 +942,42 @@ p{
       width: 28%;
     }
     
+  }
+
+  .services {
+    &__blockCallouts {
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+    }
+
+    &__blockCallout {
+
+      width: 28%;
+  
+    }
+
+    &__usps {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+    }
+  
+    &__usp:nth-child(odd) {
+      flex : 1 1 35%;
+      margin-right: 50px;
+    }
+
+    &__usp:nth-child(even) {
+      flex : 1 1 35%;
+    }
+
+    &__uspDescription {
+      text-align: justify;
+    }
   }
 
   .simple-text-module {

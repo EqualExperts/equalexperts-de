@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title, image, links }) {
   )
 
   const metaDescription = description || site.siteMetadata.description;
-
+  
   let fullStoryScript = "";
   if(process.env.NODE_ENV !== "development") {
     fullStoryScript = `
