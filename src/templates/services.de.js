@@ -34,6 +34,8 @@ const Services = (props) => {
           whatYouGet={services.whatYouGet || []}
           whyEEHeading={services.whyEeHeading || ""}
           ourUsps={services.ourUsps || []}
+          formularForSuccessHeading={services.formularForSuccessHeading || ""}
+          formularForSuccess={services.formularForSuccess || []}
         />
       </LayoutDe>
     )
@@ -72,6 +74,7 @@ export const pageQuery = graphql`
               uspDescription
             }
           }
+          formularForSuccessHeading
           formularForSuccess {
             formulaTitle
             formulaExplanation {
