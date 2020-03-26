@@ -2,8 +2,6 @@
 
 A website for Equal Experts Germany
 
-![RepoImage](docs/githubImage.png)
-
 ## Automated Responsive Regression testing with backstopJS
 
 I had some issues while developing the site with fixing css at one breakpoint only to discover later that the fix had broken a different breakpoint. Using BackstopJS, I developed a flow when developing new components doing automated Responsive regression testing, that goes :
