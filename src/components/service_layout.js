@@ -39,7 +39,9 @@ const serviceLayout = (props) => (
 
     <div className={`services__contentWrapper`}>
       <div className={`services__contentWrapper__container`}>
+        <div className={'simple-text-module'}>
         {documentToReactComponents(props.whyNow, options)}
+        </div>
         <h2>{props.whatYouGetHeading}</h2>
         <div className={'services__blockCallouts'}>
           {props.whatYouGet.map((item, i) => {
@@ -89,6 +91,28 @@ const serviceLayout = (props) => (
                     {plusSymbol}
                   </>);
         })}
+        </div>
+        <div className={"services__results"}>
+          <div className={"services__formularForSuccessEquals"}></div>
+          <div className={"services__formularForSuccessResult"}>
+            <h2>{props.whatIsSuccess}</h2>
+          </div>
+          <div className={"services__formularForSuccessInfo simple-text-module"}>
+            {documentToReactComponents(props.whatSuccessLooksLike, options)}
+          </div>
+          <div>
+            <h1>Want to hear the tricks of how to succeed in enterprise mobility?</h1>
+            <p>Join our free online webinar on : 29/03/2020</p>
+            <button>Get your pass</button>
+          </div>
+          <div>
+            <h1>Would you like to read more?</h1>
+            <p>Download the free Equal Experts Enterprise mobility PDF</p>
+            <button>Download your copy</button>
+          </div>
+          <div>
+            <h1>We can also help you with...</h1>
+          </div>
         </div>
       </div>
     </div>

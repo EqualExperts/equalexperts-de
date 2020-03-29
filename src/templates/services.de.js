@@ -36,6 +36,8 @@ const Services = (props) => {
           ourUsps={services.ourUsps || []}
           formularForSuccessHeading={services.formularForSuccessHeading || ""}
           formularForSuccess={services.formularForSuccess || []}
+          whatIsSuccess={services.whatIsSuccess || ""}
+          whatSuccessLooksLike={services.whatSuccessLooksLike.json || ""}
         />
       </LayoutDe>
     )
@@ -81,6 +83,7 @@ export const pageQuery = graphql`
               formulaExplanation
             }
           }
+          whatIsSuccess
           whatSuccessLooksLike {
             json
           }
