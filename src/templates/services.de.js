@@ -28,7 +28,7 @@ const Services = (props) => {
           heroImage={services.heroImage}
           topicTitle={services.topicTitle || ""}
           shortExplanation={services.shortExplanation.shortExplanation || ""}
-          whyNow={services.whyNow.json || {}}
+          whyNow={services.whyNow ? services.whyNow.json || {} : {}}
           whatYouGetHeading={services.whatYouGetHeading || ""}
           whatYouGetIcon={services.whatYouGetIcon}
           whatYouGet={services.whatYouGet || []}
@@ -37,7 +37,7 @@ const Services = (props) => {
           formularForSuccessHeading={services.formularForSuccessHeading || ""}
           formularForSuccess={services.formularForSuccess || []}
           whatIsSuccess={services.whatIsSuccess || ""}
-          whatSuccessLooksLike={services.whatSuccessLooksLike.json || ""}
+          whatSuccessLooksLike={services.whatSuccessLooksLike ? services.whatSuccessLooksLike.json || {} : {}}
         />
       </LayoutDe>
     )
