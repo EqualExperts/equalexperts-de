@@ -100,18 +100,20 @@ const serviceLayout = (props) => (
           <div className={"services__formularForSuccessInfo simple-text-module"}>
             {documentToReactComponents(props.whatSuccessLooksLike, options)}
           </div>
-          <div>
-            <h1>Want to hear the tricks of how to succeed in enterprise mobility?</h1>
-            <p>Join our free online webinar on : 29/03/2020</p>
-            <button>Get your pass</button>
+          <div className={"services__ctas"}>
+            <div className={"services__cta"}>
+              <h2>Join our Enterprise mobility webinar on : 29/03/2020</h2>
+              <p>Want to hear the tricks of how to succeed in enterprise mobility?</p>
+              <a href={"#"} className="btn btn--secondary">Get your free pass</a>
+            </div>
+            <div className={"services__cta"}>
+              <h2>Download the secrets of Enterprise mobility PDF</h2>
+              <p>Would you like to understand more about enterprise mobility?</p>
+              <a href={"#"} className="btn btn--secondary">Download free your copy</a>
+            </div>
           </div>
           <div>
-            <h1>Would you like to read more?</h1>
-            <p>Download the free Equal Experts Enterprise mobility PDF</p>
-            <button>Download your copy</button>
-          </div>
-          <div>
-            <h1>We can also help you with...</h1>
+              <h1>We can also help you with...</h1>
           </div>
         </div>
       </div>
