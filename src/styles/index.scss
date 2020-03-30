@@ -723,7 +723,8 @@ p{
 
   &__ctas {
     display : flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__cta {
@@ -732,8 +733,8 @@ p{
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 1px 1px 15px black;
+    margin: 25px 0;
     padding: 25px;
-    width: 45%;
   }
   
 }
@@ -994,6 +995,10 @@ p{
       flex-direction: row;
     }
 
+    &__cta {
+      width: 100%;
+    }
+
   }
 
   .contact{
@@ -1095,6 +1100,16 @@ p{
     &__uspDescription {
       text-align: justify;
     }
+
+    &__ctas {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cta {
+      max-width: 45%;
+    }
+
   }
 
   .simple-text-module {
