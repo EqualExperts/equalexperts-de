@@ -97,27 +97,53 @@ const serviceLayout = (props) => (
           <div className={"services__formularForSuccessResult"}>
             <h2>{props.whatIsSuccess}</h2>
           </div>
+        </div>
+      </div>
+    </div>
+    <div className={'services__uspsWrapper'}>
+      <div className={'services__uspsContainer'}>
+        <h2>Why it works...</h2>
+        <div className={'services__usps'}>
+        {props.formularForSuccess.map((item, i) => {
+          return (
+            <div 
+              key={`services__usps_${i}`}
+              className={'services__usp'}
+            >
+              <div className={'services__decorativeBar'} />
+              <h3 className={'services__uspHeading'}>{item.formulaTitle}</h3>
+              <div className={'services__uspDescription'}>{item.formulaExplanation.formulaExplanation}</div>
+            </div>
+          );
+        })}
+        </div>
+      </div>
+    </div>
+    <div className={`services__contentWrapper`}>
+      <div className={`services__contentWrapper__container`}>
+          <h2>Higher productivity is just around the corner...</h2>      
           <div className={"services__formularForSuccessInfo simple-text-module"}>
             {documentToReactComponents(props.whatSuccessLooksLike, options)}
           </div>
           <div className={"services__ctas"}>
             <div className={"services__cta"}>
-              <h2>Join our Enterprise mobility webinar on : 29/03/2020</h2>
-              <p>Want to hear the tricks of how to succeed in enterprise mobility?</p>
-              <a href={"#"} className="btn btn--secondary">Get your free pass</a>
+              <h2>Join our exclusive 1-hour Enterprise Mobility webinar</h2>
+              <p>Want to hear the insights of how to succeed in enterprise mobility? Save the date - our next webinar is on the : 29/03/2020</p>
+              <a href={"#"} className="btn btn--secondary">Get a free pass to our EXPERT online webinar</a>
             </div>
             <div className={"services__cta"}>
               <h2>Download the secrets of Enterprise mobility PDF</h2>
               <p>Would you like to understand more about enterprise mobility?</p>
-              <a href={"#"} className="btn btn--secondary">Download free your copy</a>
+              <a href={"#"} className="btn btn--secondary">Download your PDF with EXPERT insights</a>
             </div>
-          </div>
-          <div>
-              <h1>We can also help you with...</h1>
           </div>
         </div>
       </div>
-    </div>
+      <div className={`services__contentWrapper`}>
+        <div className={`services__contentWrapper__container`}>
+            <h2>You may also be interested in...</h2>
+        </div>
+      </div>
   </div>
 );
 

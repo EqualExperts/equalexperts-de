@@ -705,7 +705,7 @@ p{
     background-size: contain, contain;
     display: flex;
     justify-content: center;
-    height: 8em;
+    height: 14em;
     padding: 25px 50px;
     text-align: center;
   }
@@ -729,12 +729,37 @@ p{
 
   &__cta {
     align-items: center;
+    background-color: $secondaryBlue;
+    
     display : flex;
     flex-direction: column;
     justify-content: space-evenly;
     box-shadow: 1px 1px 15px black;
     margin: 25px 0;
     padding: 25px;
+
+    h2 {
+      color: $lightestGrey;
+    }
+
+    p {
+      color: $lightGrey;
+    }
+
+    .btn {
+      background-color: rgb(254, 216, 0);
+      background-image: linear-gradient(0deg, rgba(174, 185, 198, 0.3), rgba(174, 185, 198, 0.1));
+      border: 2px solid rgb(254, 216, 0);
+      box-shadow: none;
+      color:  rgba(0, 0, 0, 0.8);
+      transition: background-color 0.3s, border 0.3s;
+    }
+
+    .btn:hover {
+      color: rgba(0, 0, 0, 1);
+      text-decoration: none;
+      border: 2px solid white;
+    }
   }
   
 }
@@ -1108,6 +1133,10 @@ p{
 
     &__cta {
       max-width: 45%;
+    }
+
+    &__formularForSuccessResult {
+      height: 10em;
     }
 
   }
