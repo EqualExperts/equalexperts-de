@@ -38,7 +38,10 @@ const Services = (props) => {
         formularForSuccess={services.formularForSuccess || []}
         whatIsSuccess={services.whatIsSuccess || ""}
         whatSuccessLooksLike={services.whatSuccessLooksLike ? services.whatSuccessLooksLike.json || {content : []} : {content : []}}
-      />
+        summaryTitle={services.summaryTitle}
+        ctas={services.ctas}
+      >
+      </ServiceLayout>
     </LayoutUS>
     )
 }
@@ -84,8 +87,16 @@ export const pageQuery = graphql`
             }
           }
           whatIsSuccess
+          summaryTitle
           whatSuccessLooksLike {
             json
+          }
+          ctas {
+            description {
+              description
+            }
+            title
+            buttonText
           }
           similarServices {
             serviceTitle
