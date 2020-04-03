@@ -40,6 +40,7 @@ const Services = (props) => {
           whatSuccessLooksLike={services.whatSuccessLooksLike ? services.whatSuccessLooksLike.json || {content : []} : {content : []}}
           summaryTitle={services.summaryTitle}
           ctas={services.ctas}
+          similarServices={services.similarServices}
         />
       </LayoutDe>
     )
