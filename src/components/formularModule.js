@@ -10,10 +10,13 @@ const FormularModule = (props) => (
         if(i < props.formularForSuccess.length-1) {
           plusSymbol = (<div className={"services__formularForSuccessPlus"}></div>);
         }
-        return (<>
-                  <div className={"services__formularForSuccessComponent"}>{item.formulaTitle}</div>
+        return (<React.Fragment key={`formular_part_${i}`} >
+                  <div
+                    className={"services__formularForSuccessComponent"}>{
+                      item.formulaTitle}
+                  </div>
                   {plusSymbol}
-                </>);
+                </React.Fragment>);
       })}
       </div>
       <div className={"services__results"}>

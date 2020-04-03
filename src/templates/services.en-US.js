@@ -40,6 +40,7 @@ const Services = (props) => {
         whatSuccessLooksLike={services.whatSuccessLooksLike ? services.whatSuccessLooksLike.json || {content : []} : {content : []}}
         summaryTitle={services.summaryTitle}
         ctas={services.ctas}
+        similarServices={services.similarServices}
       >
       </ServiceLayout>
     </LayoutUS>
@@ -102,6 +103,12 @@ export const pageQuery = graphql`
             serviceTitle
             serviceDescription {
               serviceDescription
+            }
+            serviceThumbnail {
+              file {
+                fileName
+                url
+              }
             }
           }
       }

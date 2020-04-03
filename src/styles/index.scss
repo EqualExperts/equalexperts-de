@@ -494,6 +494,10 @@ p{
     align-items: center;
     padding: 2em 25px;
 
+    .simple-text-module {
+      padding: 0;
+    }
+
     &__container{
       max-width: 1024px;
       width: 100%;
@@ -734,7 +738,7 @@ p{
     display : flex;
     flex-direction: column;
     justify-content: space-evenly;
-    box-shadow: 1px 1px 15px black;
+    box-shadow: 1px 1px 15px $darkGrey;
     margin: 25px 0;
     padding: 25px;
 
@@ -761,6 +765,38 @@ p{
       border: 2px solid white;
     }
   }
+
+  &__similarServices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__similarService {
+    background-color: $lightGrey;
+    box-shadow: 1px 1px 7px $midGrey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    img {
+      height: 270px;
+      object-fit: cover;
+    }
+    h3 {
+      padding: 10px;
+      font-size: 1em;
+      margin: 0.5em 0 0 0;
+    }
+
+    p {
+      padding: 10px;
+      font-size: 0.8em;
+      text-align: left;
+    }
+  }
+
+
   
 }
 
@@ -1092,6 +1128,7 @@ p{
   }
 
   .services {
+
     &__blockCallouts {
 
       flex-direction: row;
@@ -1128,7 +1165,7 @@ p{
 
     &__ctas {
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     &__cta {
@@ -1137,6 +1174,16 @@ p{
 
     &__formularForSuccessResult {
       height: 10em;
+    }
+
+    &__similarServices {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__similarService {
+      margin-right: 25px;
+      width : 30%;
     }
 
   }

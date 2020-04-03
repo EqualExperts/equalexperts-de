@@ -102,6 +102,12 @@ export const pageQuery = graphql`
             serviceDescription {
               serviceDescription
             }
+            serviceThumbnail {
+              file {
+                fileName
+                url
+              }
+            }
           }
       }
     }

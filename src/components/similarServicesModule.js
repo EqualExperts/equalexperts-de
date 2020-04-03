@@ -9,12 +9,12 @@ const SimilarServices = (props) => (
         {props.similarServices.map((item, i) => {
           return (
             <div
-              key={`services__blockCallout_${i}`}
-              className={'services__blockCallout'}
+              key={`services__similarServices_${i}`}
+              className={'services__similarService'}
             >
-              <img src="#" />
+              <img src={item.serviceThumbnail.file.url} />
               <h3>{item.serviceTitle}</h3>
-              <div>{item.serviceDescription}</div>
+              <p>{item.serviceDescription.serviceDescription}</p>
             </div>
           );
         })}

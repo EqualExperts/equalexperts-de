@@ -3,6 +3,7 @@ import BlockCalloutModule from "./blockCalloutsModule";
 import USPsModule from "./USPsModule";
 import FormularModule from "./formularModule";
 import SummaryModule from "./summaryModule";
+import SimilarServices from "./similarServicesModule";
 
 const serviceLayout = (props) => (
   <div>
@@ -39,11 +40,9 @@ const serviceLayout = (props) => (
         whatSuccessLooksLike={props.whatSuccessLooksLike}
         ctas={props.ctas}
       />
-      <div className={`services__contentWrapper`}>
-        <div className={`services__contentWrapper__container`}>
-            <h2>You may also be interested in...</h2>
-        </div>
-      </div>
+      <SimilarServices
+          similarServices={props.similarServices}
+      />
   </div>
 );
 

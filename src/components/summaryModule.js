@@ -45,7 +45,7 @@ class SummaryModule extends React.Component {
                   description = description.replace(/\[DATE\]/g, resultDate.toLocaleDateString());
                 }
                 return (
-                  <div className={"services__cta"}>
+                  <div className={"services__cta"} key={`summaryCTA_${item.title}`}>
                     <h2>{item.title}</h2>
                     <p>{description}</p>
                     <a href={"#"} className="btn btn--secondary">{item.buttonText}</a>
