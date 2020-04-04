@@ -663,9 +663,9 @@ p{
 
   &__formularForSuccessComponent {
     align-items: center;
-    background-image: url("data:image/svg+xml,%3Csvg width='130' height='130' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Cpath d='m54,7.6642l-46.33387,-0.1642l-0.16613,115.00001l46.44957,0' fill='none' id='svg_7' stroke='%231795d4' stroke-width='15'/%3E%3Cpath d='m122.75,7.6642l-46.33387,-0.1642l-0.16613,115.00001l46.44957,0' fill='none' id='svg_7' stroke='%231795d4' stroke-width='15' transform='rotate(179.741 99.5 65)'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $tertiaryBlue;
+    border-radius: 5px;
+    color: $white;
     display: flex;
     height: 8em;
     padding: 25px;
@@ -691,25 +691,23 @@ p{
   }
 
   &__formularForSuccessEquals {
+    box-sizing: border-box;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cline fill='none' id='svg_4' stroke='%231795d4' stroke-width='15' x1='0.125' x2='39.625' y1='32' y2='32'/%3E%3Cline fill='none' id='svg_5' stroke='%231795d4' stroke-width='15' x1='0.125' x2='39.625' y1='8' y2='8'/%3E%3C/g%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 25px 3em;
-    height: 2em;
-    width: 2em;
+    height: 4em;
+    width: 4em;
   }
 
   &__formularForSuccessResult {
     align-items: center;
     background-color: rgba(25, 107, 152, 0.1);
-    background-image: url("data:image/svg+xml,%3Csvg width='65' height='130' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Cpath d='m54,7.6642l-46.33387,-0.1642l-0.16613,115.00001l46.44957,0' fill='none' id='svg_7' stroke='%231795d4' stroke-width='15'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg width='65' height='130' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cg class='layer' id='svg_1' transform='rotate(180 33.75 65)'%3E%3Cpath d='m57,7.6642l-46.33387,-0.1642l-0.16613,115.00001l46.44957,0' fill='none' id='svg_7' stroke='%231795d4' stroke-width='15'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-position: top left, top right;
-    background-repeat: no-repeat;
-    background-size: contain, contain;
+    border: 6px dashed $midGrey;
     display: flex;
     justify-content: center;
     height: 14em;
+    margin: 25px 0;
     padding: 25px 50px;
     text-align: center;
   }
