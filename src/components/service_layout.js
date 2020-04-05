@@ -19,7 +19,8 @@ const serviceLayout = (props) => (
     </div>
       <BlockCalloutModule 
         whyNow={props.whyNow}
-        whatYouGet={props.whatYouGet} 
+        whatYouGet={props.whatYouGet}
+        whatYouGetHeading={props.whatYouGetHeading}
         whatYouGetIcon={props.whatYouGetIcon} 
       />
       <USPsModule
