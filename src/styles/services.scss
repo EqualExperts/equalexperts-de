@@ -1,0 +1,445 @@
+
+@import "variables";
+
+.services {
+
+  &__hero {
+    display: flex;
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    min-height: 30vh;
+    padding: 0 25px;
+
+    &__container {
+      align-items: center;
+      display: flex;
+      flex-direction:column;
+      justify-content: space-between;
+      width: 1024px;
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+
+  &__postOverview {
+    text-align: center;
+  }
+
+  &__contentWrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 25px;
+
+    .simple-text-module {
+      padding: 0;
+    }
+
+    &__container{
+      max-width: 1024px;
+      width: 100%;
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+
+  }
+
+  &__title{
+    color : $white;
+    text-align: left;
+    font-size: 2em;
+  }
+
+  &__postOverview{
+    color : $midLightGrey;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    max-width: 768px;
+  }
+  &__content{
+    padding-top:2em;
+    p{
+      line-height: 1.5;
+      text-align: justify;
+      padding: 0.5em 0;
+    }
+    h3{
+      padding:1em 0 0.5em 0;
+      font-size: 1.5em;
+    }
+  }
+
+  &__list {
+    color: primaryBlue;
+    list-style-type: square;
+    margin-left: 25px;
+  }
+
+  &__image{
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__blockCallouts {
+    display : flex;
+    flex-direction: column;
+  }
+
+  &__blockCallout {
+    align-items: center;
+    background-color: $darkGrey;
+    background-position : center 30%;
+    background-repeat : no-repeat;
+    background-size : 1.5em;
+    border-radius: 5px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    justify-content: center;
+    padding: 4em 1em 1em 1em;
+    margin: 25px;
+    text-align: center;
+    width: auto;
+  }
+
+  &__blockCallout:nth-child(1),
+  &__blockCallout:nth-child(7) { 
+    background-color: $category-all;
+  }
+
+  &__blockCallout:nth-child(2),
+  &__blockCallout:nth-child(8) { 
+    background-color: $category-ee-life;
+  }
+
+  &__blockCallout:nth-child(3),
+  &__blockCallout:nth-child(9) { 
+    background-color: $category-our-thinking;
+  }
+
+  &__blockCallout:nth-child(4),
+  &__blockCallout:nth-child(10) { 
+    background-color: $category-tech-focus;
+  }
+
+  &__blockCallout:nth-child(5),
+  &__blockCallout:nth-child(11) { 
+    background-color: $category-whats-new;
+  }
+
+  &__uspsWrapper {
+    background-color: $lightestGrey;
+    display: flex;
+    justify-content: center;
+    padding: 2em 25px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  &__uspsContainer {
+    max-width: 1024px;
+  }
+
+  &__usps {
+    margin : 25px 0;
+  }
+
+  &__usp {
+    margin : 50px 0;
+  }
+
+  &__decorativeBar {
+    background-color: $category-all;
+    height: 2px;
+    width: 75px;
+  }
+
+  &__usp:nth-child(1) .services__decorativeBar { 
+    background-color: $category-all;
+  }
+
+  &__usp:nth-child(2) .services__decorativeBar { 
+    background-color: $category-ee-life;
+  }
+
+  &__usp:nth-child(3) .services__decorativeBar { 
+    background-color: $category-our-thinking;
+  }
+
+  &__usp:nth-child(4) .services__decorativeBar { 
+    background-color: $category-tech-focus;
+  }
+
+  &__usp:nth-child(5) .services__decorativeBar { 
+    background-color: $category-whats-new;
+  }
+
+  &__uspHeading {
+    color: $darkGrey;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin : 12px 0;
+  }
+
+  &__formularForSuccess {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+
+  }
+
+  &__formularForSuccessComponent {
+    align-items: center;
+    background-color: $tertiaryBlue;
+    border-radius: 5px;
+    color: $white;
+    display: flex;
+    height: 8em;
+    padding: 25px;
+    text-align: center;
+    width: 8em;
+  }
+
+  &__formularForSuccessPlus {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Cline fill='none' id='svg_2' stroke='%231795d4' stroke-width='15' x1='20' x2='20' y1='0.40625' y2='39.40625'/%3E%3Cline fill='none' id='svg_4' stroke='%231795d4' stroke-width='15' x1='0.125' x2='39.625' y1='20' y2='20'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 25px 0;
+    height: 2em;
+    width: 2em;
+  }
+
+  &__results {
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__formularForSuccessEquals {
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg'%3E%3Cg class='layer'%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cline fill='none' id='svg_4' stroke='%231795d4' stroke-width='15' x1='0.125' x2='39.625' y1='32' y2='32'/%3E%3Cline fill='none' id='svg_5' stroke='%231795d4' stroke-width='15' x1='0.125' x2='39.625' y1='8' y2='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 25px 3em;
+    height: 4em;
+    width: 4em;
+  }
+
+  &__formularForSuccessResult {
+    align-items: center;
+    background-color: rgba(25, 107, 152, 0.1);
+    border: 6px dashed $midGrey;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    padding: 25px 50px;
+    text-align: center;
+  }
+
+  &__formularForSuccessResult {
+    h2 {
+      color : $greyBlue;
+      margin-bottom: 0;
+    }
+  }
+
+  &__formularForSuccessInfo {
+    margin: 25px 0;
+  }
+
+  &__ctas {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__cta {
+    align-items: center;
+    background-color: $secondaryBlue;
+    
+    display : flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 1px 1px 15px $darkGrey;
+    margin: 25px 0;
+    padding: 25px;
+
+    h2 {
+      color: $lightestGrey;
+    }
+
+    p {
+      color: $lightGrey;
+    }
+
+    .btn {
+      background-color: rgb(254, 216, 0);
+      background-image: linear-gradient(0deg, rgba(174, 185, 198, 0.3), rgba(174, 185, 198, 0.1));
+      border: 2px solid rgb(254, 216, 0);
+      box-shadow: none;
+      color:  rgba(0, 0, 0, 0.8);
+      transition: background-color 0.3s, border 0.3s;
+    }
+
+    .btn:hover {
+      color: rgba(0, 0, 0, 1);
+      text-decoration: none;
+      border: 2px solid white;
+    }
+  }
+
+  &__similarServices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__similarService {
+    background-color: $lightGrey;
+    box-shadow: 1px 1px 7px $midGrey;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+    img {
+      height: 270px;
+      object-fit: cover;
+    }
+    h3 {
+      padding: 10px;
+      font-size: 1em;
+      margin: 0.5em 0 0 0;
+    }
+
+    p {
+      padding: 10px;
+      font-size: 0.8em;
+      text-align: left;
+    }
+  }
+
+
+  
+}
+
+@media screen and (min-width: 768px) {
+  
+  .services {
+
+    &__title{
+      font-size: 3em;
+      width: 50%;
+    }
+    &__content{
+      padding-top:2em;
+      p{
+        line-height: 1.5;
+        text-align: justify;
+        padding: 0.5em 0;
+      }
+      h3{
+        padding:1em 0 0.5em 0;
+        font-size: 1.5em;
+      }
+    }
+    &-list__content{
+      padding: 1em 5em 2em 5em;
+    }
+
+    &__formularForSuccess {
+      flex-direction: row;
+    }
+
+    &__cta {
+      width: 100%;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .services {
+
+    &__blockCallouts {
+
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+    }
+
+    &__blockCallout {
+
+      width: 28%;
+  
+    }
+
+    &__usps {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+    }
+  
+    &__usp:nth-child(odd) {
+      flex : 1 1 35%;
+      margin-right: 50px;
+    }
+
+    &__usp:nth-child(even) {
+      flex : 1 1 35%;
+    }
+
+    &__uspDescription {
+      text-align: justify;
+    }
+
+    &__ctas {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__cta {
+      max-width: 45%;
+    }
+
+    &__formularForSuccessResult {
+      height: 10em;
+    }
+
+    &__similarServices {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__similarService {
+      margin-right: 25px;
+      width : 30%;
+    }
+
+  }
+
+}

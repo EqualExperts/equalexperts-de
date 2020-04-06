@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 import LayoutDe from "../components/layout.de-DE"
 import SEO from "../components/seo"
 import "../styles/index.scss"
+import "../styles/services.scss"
 import ServiceLayout from "../components/service_layout"
 
 const Services = (props) => {
