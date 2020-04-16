@@ -34,22 +34,7 @@ class IndexPage extends React.Component {
         }
         <Clients></Clients>
         <Contacts></Contacts>
-        <Roles></Roles>
-        {/* {
-          modules.map((module) => {
-            return (
-              <div className={`module`} key={module}>
-                <div className={`module__title`}>{module.node.moduleTitle}</div>
-                <div className={`module__content`} dangerouslySetInnerHTML={{ __html: module.node.moduleContent.childContentfulRichText.html }} />
-                {module.node.moduleCtAlink.childContentfulRichText.html ?
-                  <div className={`module__link`}
-                    dangerouslySetInnerHTML={{ __html: module.node.moduleCtAlink.childContentfulRichText.html }} /> : ''
-                }
-              </div>
-
-            )
-          })
-        } */}
+        {/* <Roles></Roles> */}
       </LayoutDe>
     )
   }
