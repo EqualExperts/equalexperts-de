@@ -1,59 +1,58 @@
-import {graphql, useStaticQuery} from "gatsby"
-import React from "react";
-import RolesLayout from "./roles_layout";
-import {getCurrentLangKey} from "ptz-i18n";
+import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
+import RolesLayout from "./roles_layout"
+import { getCurrentLangKey } from "ptz-i18n"
 
-const RolesUS = (props) => {
-    const dataQuery = useStaticQuery(graphql`
+const RolesUS = props => {
+  const dataQuery = useStaticQuery(graphql`
     query RolesQueryUS {
-        allContentfulRolesIntro(filter: {node_locale: {eq: "en-US"}}) {
-            edges {
-                node {
-                    rolesTitle
-                    rolesIntroduction {
-                        json
-                    }
-                }
+      allContentfulRolesIntro(filter: { node_locale: { eq: "en-US" } }) {
+        edges {
+          node {
+            rolesTitle
+            rolesIntroduction {
+              json
             }
+          }
         }
-        allContentfulRole(filter: {node_locale: {eq: "de"}}) {
-            edges {
-                node {
-                    roleTitle
-                    roleLink
-                    roleImage {
-                        file {
-                            fileName
-                            url
-                        }
-                    }
-                }
-            }
-        }
-        site {
-            siteMetadata {
-              title,
-              description,
-              languages {
-                defaultLangKey
-                langs
+      }
+      allContentfulRole(filter: { node_locale: { eq: "de" } }) {
+        edges {
+          node {
+            roleTitle
+            roleLink
+            roleImage {
+              file {
+                fileName
+                url
               }
             }
           }
+        }
+      }
+      site {
+        siteMetadata {
+          title
+          description
+          languages {
+            defaultLangKey
+            langs
+          }
+        }
+      }
     }
-    `);
-    const url = typeof window !== 'undefined' ? window.location.pathname : '';
-    const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
-    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-    let homeLink = (langKey === defaultLangKey) ? '/' : `/${langKey}/`;
-    return ( 
-        <RolesLayout
-            homeLink={homeLink}
-            rolesIntroContent={dataQuery.allContentfulRolesIntro.edges[0].node}
-            roles={dataQuery.allContentfulRole.edges}
-        />
-    );
+  `)
+  const url = typeof window !== "undefined" ? window.location.pathname : ""
+  const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url)
+  let homeLink = langKey === defaultLangKey ? "/" : `/${langKey}/`
+  return (
+    <RolesLayout
+      homeLink={homeLink}
+      rolesIntroContent={dataQuery.allContentfulRolesIntro.edges[0].node}
+      roles={dataQuery.allContentfulRole.edges}
+    />
+  )
 }
-
 
 export default RolesUS

@@ -1,7 +1,7 @@
-const languages = require('./languages');
+const languages = require("./languages")
 
-const dotenv= require('dotenv')
-if(process.env.NODE_ENV !== 'production') {
+const dotenv = require("dotenv")
+if (process.env.NODE_ENV !== "production") {
   dotenv.config()
 }
 module.exports = {
@@ -18,13 +18,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-i18n',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyForNull: 'any',
+        langKeyForNull: "any",
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: false,
-        prefixDefault : false,
-      }
+        prefixDefault: false,
+      },
     },
     `@contentful/gatsby-transformer-contentful-richtext`,
     {
@@ -39,12 +39,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-advanced-sitemap`,
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://www.equalexperts.de',
-        sitemap: 'https://www.equalexperts.de/sitemap.xml',
-        policy: [{ userAgent: '*', disallow: ['/'] }]
-      }
+        host: "https://www.equalexperts.de",
+        sitemap: "https://www.equalexperts.de/sitemap.xml",
+        policy: [{ userAgent: "*", disallow: ["/"] }],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -63,7 +63,7 @@ module.exports = {
       options: {
         spaceId: `2mx9j3gfirje`,
         // read-only API key
-        accessToken: 'DaQQmIZJGOeLLqogIPjc3_bf4gTtAwt_A4Z8S3-GKqU'
+        accessToken: "DaQQmIZJGOeLLqogIPjc3_bf4gTtAwt_A4Z8S3-GKqU",
       },
     },
   ],
