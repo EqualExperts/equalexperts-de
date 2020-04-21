@@ -18,10 +18,10 @@ function SEO({ description, lang, meta, title, image, links }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description;
-  
-  let fullStoryScript = "";
-  if(process.env.NODE_ENV !== "development") {
+  const metaDescription = description || site.siteMetadata.description
+
+  let fullStoryScript = ""
+  if (process.env.NODE_ENV !== "development") {
     fullStoryScript = `
         window['_fs_debug'] = false;
         window['_fs_host'] = 'fullstory.com';
@@ -42,7 +42,7 @@ function SEO({ description, lang, meta, title, image, links }) {
             g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
             if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
         })(window,document,window['_fs_namespace'],'script','user');
-      `;
+      `
   }
 
   return (
@@ -92,9 +92,7 @@ function SEO({ description, lang, meta, title, image, links }) {
         },
       ].concat(meta)}
     >
-      <script>
-        {fullStoryScript}
-      </script>
+      <script>{fullStoryScript}</script>
     </Helmet>
   )
 }

@@ -1,23 +1,26 @@
 import React from "react"
 
-const FormularModule = (props) => (
+const FormularModule = props => (
   <div className={`services__contentWrapper`}>
     <div className={`services__contentWrapper__container`}>
       <h2>{props.formularForSuccessHeading}</h2>
       <div className={"services__formularForSuccess"}>
-      {props.formularForSuccess.map((item, i) => {
-        let plusSymbol = "";
-        if(i < props.formularForSuccess.length-1) {
-          plusSymbol = (<div className={"services__formularForSuccessPlus"}></div>);
-        }
-        return (<React.Fragment key={`formular_part_${i}`} >
-                  <div
-                    className={"services__formularForSuccessComponent"}>{
-                      item.formulaTitle}
-                  </div>
-                  {plusSymbol}
-                </React.Fragment>);
-      })}
+        {props.formularForSuccess.map((item, i) => {
+          let plusSymbol = ""
+          if (i < props.formularForSuccess.length - 1) {
+            plusSymbol = (
+              <div className={"services__formularForSuccessPlus"}></div>
+            )
+          }
+          return (
+            <React.Fragment key={`formular_part_${i}`}>
+              <div className={"services__formularForSuccessComponent"}>
+                {item.formulaTitle}
+              </div>
+              {plusSymbol}
+            </React.Fragment>
+          )
+        })}
       </div>
       <div className={"services__results"}>
         <div className={"services__formularForSuccessEquals"}></div>
@@ -27,7 +30,6 @@ const FormularModule = (props) => (
       </div>
     </div>
   </div>
-);
-
+)
 
 export default FormularModule

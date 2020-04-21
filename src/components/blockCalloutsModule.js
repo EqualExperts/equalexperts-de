@@ -1,11 +1,11 @@
 import React from "react"
 
-import { BLOCKS, MARKS} from "@contentful/rich-text-types"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const options = {
   renderMark: {
-    [MARKS.BOLD]: text => <span className="bold">{text}</span>
+    [MARKS.BOLD]: text => <span className="bold">{text}</span>,
   },
   renderNode: {
     [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
@@ -15,38 +15,48 @@ const options = {
     [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
     [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
     [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
-    [BLOCKS.UL_LIST]: (node, children) => <ul className="services__list">{children}</ul>,
+    [BLOCKS.UL_LIST]: (node, children) => (
+      <ul className="services__list">{children}</ul>
+    ),
     [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
     [BLOCKS.LIST_ITEM]: (node, children) => <li>{children}</li>,
     [BLOCKS.EMBEDDED_ASSET]: node => {
-      return (<div className="services__image"><img src={node.data.target.fields.file.de.url} alt={node.data.target.fields.title.de} /></div>);
-    }
+      return (
+        <div className="services__image">
+          <img
+            src={node.data.target.fields.file.de.url}
+            alt={node.data.target.fields.title.de}
+          />
+        </div>
+      )
+    },
   },
 }
 
-const blockCalloutsModule = (props) => (
+const blockCalloutsModule = props => (
   <div className={`services__contentWrapper`}>
     <div className={`services__contentWrapper__container`}>
-      <div className={'simple-text-module'}>
-      {documentToReactComponents(props.whyNow, options)}
+      <div className={"simple-text-module"}>
+        {documentToReactComponents(props.whyNow, options)}
       </div>
       <h2>{props.whatYouGetHeading}</h2>
-      <div className={'services__blockCallouts'}>
+      <div className={"services__blockCallouts"}>
         {props.whatYouGet.map((item, i) => {
           return (
             <div
               key={`services__blockCallout_${i}`}
-              className={'services__blockCallout'} 
-              style={{backgroundImage : `url(${props.whatYouGetIcon.file.url})`}}
+              className={"services__blockCallout"}
+              style={{
+                backgroundImage: `url(${props.whatYouGetIcon.file.url})`,
+              }}
             >
               {item}
             </div>
-          );
+          )
         })}
       </div>
     </div>
   </div>
-);
-
+)
 
 export default blockCalloutsModule

@@ -1,35 +1,33 @@
 import React from "react"
-import HeaderLayout from "../../components/header_layout";
+import HeaderLayout from "../../components/header_layout"
 import "../../styles/index.scss"
-
 
 class IndexPage extends React.Component {
   render() {
+    const langsMenu = ["de", "en-US"]
 
-    const langsMenu = ["de", "en-US"];
-   
     const navLinks = [
       {
-        "navItemText": "Kunde",
-        "navItemUrl": "#Kunde"
+        navItemText: "Kunden",
+        navItemUrl: "#Kunden",
       },
       {
-        "navItemText": "Karriere",
-        "navItemUrl": "#Karriere"
+        navItemText: "Karriere",
+        navItemUrl: "#Karriere",
       },
       {
-        "navItemText": "Empowerment and Tech",
-        "navItemUrl": "something"
+        navItemText: "Empowerment and Tech",
+        navItemUrl: "something",
       },
       {
-        "navItemText": "blog",
-        "navItemUrl": "blog/"
+        navItemText: "Blog",
+        navItemUrl: "blog/",
       },
       {
-        "navItemText": "kontact",
-        "navItemUrl": "#kontact"
-      }
-    ];
+        navItemText: "Kontakt",
+        navItemUrl: "#Kontakt",
+      },
+    ]
 
     return (
       <div className={`main-container`}>
@@ -43,8 +41,8 @@ class IndexPage extends React.Component {
   }
   componentDidMount() {
     window.requestAnimationFrame(function() {
-      console.log("componentLoaded");
-    });
+      console.log("componentLoaded")
+    })
   }
 }
 
