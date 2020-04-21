@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow: /services/
 Sitemap: https://www.equalexperts.de/sitemap.xml
 Host: https://www.equalexperts.de
