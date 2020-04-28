@@ -3,6 +3,7 @@ import BlockCalloutModule from "./blockCalloutsModule"
 import USPsModule from "./USPsModule"
 import FormularModule from "./formularModule"
 import SummaryModule from "./summaryModule"
+import CTAModule from "./CTA"
 import SimilarServices from "./similarServicesModule"
 
 const serviceLayout = props => (
@@ -25,6 +26,9 @@ const serviceLayout = props => (
       whatYouGetIcon={props.whatYouGetIcon}
     />
     <USPsModule whyEEHeading={props.whyEEHeading} ourUsps={props.ourUsps} />
+    <CTAModule
+      ctas={props.ctas}
+    />
     <FormularModule
       formularForSuccessHeading={props.formularForSuccessHeading}
       formularForSuccess={props.formularForSuccess}
@@ -44,7 +48,6 @@ const serviceLayout = props => (
     <SummaryModule
       summaryTitle={props.summaryTitle}
       whatSuccessLooksLike={props.whatSuccessLooksLike}
-      ctas={props.ctas}
     />
     <SimilarServices similarServices={props.similarServices} />
   </div>

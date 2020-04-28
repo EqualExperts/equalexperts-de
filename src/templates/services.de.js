@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import LayoutDe from "../components/layout.de-DE"
+import Contacts from "../components/contacts.de-DE"
 import SEO from "../components/seo"
 import "../styles/index.scss"
 import "../styles/services.scss"
@@ -50,6 +51,7 @@ const Services = props => {
         ctas={services.ctas}
         similarServices={services.similarServices}
       />
+      <Contacts />
     </LayoutDe>
   )
 }
@@ -105,6 +107,12 @@ export const pageQuery = graphql`
         }
         title
         buttonText
+        ctaImage {
+          file {
+            fileName
+            url
+          }
+        }
       }
       similarServices {
         serviceTitle

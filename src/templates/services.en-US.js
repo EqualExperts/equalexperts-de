@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import LayoutUS from "../components/layout.en-US"
 import SEO from "../components/seo"
+import Contacts from "../components/contacts.en-US"
 import "../styles/index.scss"
 import "../styles/services.scss"
 import ServiceLayout from "../components/service_layout"
@@ -49,7 +50,8 @@ const Services = props => {
         summaryTitle={services.summaryTitle}
         ctas={services.ctas}
         similarServices={services.similarServices}
-      ></ServiceLayout>
+      />
+      <Contacts />
     </LayoutUS>
   )
 }
@@ -105,6 +107,12 @@ export const pageQuery = graphql`
         }
         title
         buttonText
+        ctaImage {
+          file {
+            fileName
+            url
+          }
+        }
       }
       similarServices {
         serviceTitle
