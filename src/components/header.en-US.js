@@ -3,7 +3,7 @@ import React from "react"
 import { getCurrentLangKey } from "ptz-i18n"
 import HeaderLayout from "./header_layout"
 
-const HeaderDe = () => {
+const HeaderDe = (location) => {
   const dataQuery = useStaticQuery(graphql`
     query headerEn {
       allContentfulMainNav(filter: { node_locale: { eq: "en-US" } }) {
@@ -30,8 +30,8 @@ const HeaderDe = () => {
   `)
   const url = typeof window !== "undefined" ? window.location.pathname : ""
   const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, url)
-  const homeLink = langKey === defaultLangKey ? "" : `/${langKey}/`
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+  const homeLink = langKey === defaultLangKey ? "" : `/${langKey}/`;
 
   return (
     <HeaderLayout

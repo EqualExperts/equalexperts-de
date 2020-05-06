@@ -28,9 +28,9 @@ const HeaderDe = () => {
       }
     }
   `)
-  const url = typeof window !== "undefined" ? window.location.pathname : ""
-  const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages
-  const langKey = getCurrentLangKey(langs, defaultLangKey, url)
+  const url = typeof window !== "undefined" ? window.location.pathname : "";
+  const { langs, defaultLangKey } = dataQuery.site.siteMetadata.languages;
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   let homeLink = langKey === defaultLangKey ? "/" : `/${langKey}/`
 
   return (

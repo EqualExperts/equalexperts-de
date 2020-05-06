@@ -19,7 +19,6 @@ class CTAModule extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let lightboxClass = this.state.lightboxVisible ? "services__lightBoxVisible" : "";
     return (
       <div className={`services__contentWrapper`}>
