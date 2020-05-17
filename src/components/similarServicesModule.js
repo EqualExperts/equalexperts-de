@@ -11,7 +11,7 @@ const SimilarServices = props => (
               key={`services__similarServices_${i}`}
               className={"services__similarService"}
             >
-              <img src={item.serviceThumbnail.file.url} />
+              <img alt={item.serviceThumbnail.file.filename} src={item.serviceThumbnail.file.url} />
               <h3>{item.serviceTitle}</h3>
               <p>{item.serviceDescription.serviceDescription}</p>
             </div>

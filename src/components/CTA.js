@@ -40,7 +40,7 @@ class CTAModule extends React.Component {
               }
               let image;
               if(item.ctaImage && item.ctaImage.file) {
-                image = (<img src={item.ctaImage.file.url} className="services__ctaImage" />);
+                image = (<img alt={"showing someone getting work done"} src={item.ctaImage.file.url} className="services__ctaImage" />);
               }
               return (
                 <div

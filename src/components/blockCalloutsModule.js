@@ -1,6 +1,6 @@
 import React from "react"
 
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const options = {
@@ -29,6 +29,20 @@ const options = {
           />
         </div>
       )
+    },
+    [INLINES.HYPERLINK]: node => {
+      let link = (<a href={node.data.uri}>{node.content[0].value}</a>);
+      let videoFlag = /IframeVideoLink/g;
+      if(node.content[0].value.match(videoFlag) !== null) {
+        let attributes = node.content[0].value.replace(videoFlag, "").replace(/"/g, "").split(" ");
+        let attributesObject = {};
+        attributes.forEach(element => {
+          let nameValue = element.split("=");
+          attributesObject[nameValue[0]] = nameValue[1];
+        });
+        link = (<iframe title={"inpageIframe"} src={node.data.uri} {...attributesObject} />);
+      }
+      return link;
     },
   },
 }
